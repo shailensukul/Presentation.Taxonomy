@@ -154,7 +154,6 @@
       <DependentUpon>jQuery.feature</DependentUpon>
     </Content>
     <Content Include="Lists\Elements.xml" />
-    <Content Include="PS\Notes.txt" />
     <Content Include="Resources\css\jQueryUI\jquery-ui.min.css" />
     <Content Include="Resources\css\jQueryUI\jquery-ui.theme.css" />
     <Content Include="Resources\Elements.xml" />
