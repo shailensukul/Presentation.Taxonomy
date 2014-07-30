@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="ContentTypes">
+  </Module>
+
+  <!-- Potty -->
+  <ContentType ID='0x0100390C8F4B6841B24D94E2B8A08E2D3C81' Name='Potty' Group='Sukul.Demo' Description='Tracks potty routine' Overwrite='TRUE' Inherits='FALSE'>
+    <FieldRefs>
+      <FieldRef ID='{b65a04e7-9daa-49e0-bc73-1209df36e2b2}' Name='Child' Required='FALSE' Hidden='FALSE' />
+      <FieldRef ID='{db8695a1-b73a-4caa-b3ba-5b287a90b3e8}' Name='Room' Required='TRUE' Hidden='FALSE' />
+      <FieldRef ID='{dc0f6741-0705-48f2-9669-7c19a1f63eae}' Name='Date_x0020_Of_x0020_Event' Required='FALSE' Hidden='FALSE' />
+      <FieldRef ID='{7eea12c2-4d4e-40d9-b6b6-45ea39b79c94}' Name='PottyType' Required='TRUE' Hidden='FALSE' />
+      <FieldRef ID='{c920f99c-2602-4c1c-9c74-62708612abe5}' Name='PottyInDiaper' Required='FALSE' Hidden='FALSE' />
+      <FieldRef ID='{fa564e0f-0c70-4ab9-b863-0177e6ddd247}' Name='Title' Required='FALSE' Hidden='TRUE' ShowInNewForm='TRUE' ShowInEditForm='TRUE' />
+      <FieldRef ID='{27226dd6-a0ed-47dc-88c4-7092c289c362}' Name='neea12c24d4e40d9b6b645ea39b79c94' Required='FALSE' Hidden='TRUE' />
+      <FieldRef ID='{f3b0adf9-c1a2-4b02-920d-943fba4b3611}' Name='TaxCatchAll' Required='FALSE' Hidden='TRUE' />
+      <FieldRef ID='{8f6b6dd8-9357-4019-8172-966fcd502ed2}' Name='TaxCatchAllLabel' Required='FALSE' Hidden='TRUE' />
+      <FieldRef ID='{c042a256-787d-4a6f-8a8a-cf6ab767f12d}' Name='ContentType' Required='FALSE' Hidden='FALSE' />
+      <FieldRef ID='{3c9d245c-f5fa-415d-ab9d-d41f47f267b2}' Name='SukulFieldsRoom0' Required='FALSE' Hidden='TRUE' />
+    </FieldRefs>
+  </ContentType>
+
+  <!-- Attendance --> 
+  <ContentType ID='0x01008955857FFAAD0A428C20698285E6FBDA' Name='Attendance' Group='Sukul.Demo' Description='Tracks kids attendance' Overwrite='TRUE' Inherits='FALSE'>
+    <FieldRefs>
+      <FieldRef ID='{db8695a1-b73a-4caa-b3ba-5b287a90b3e8}' Name='Room' Required='FALSE' Hidden='FALSE' />
+      <FieldRef ID='{b65a04e7-9daa-49e0-bc73-1209df36e2b2}' Name='Child' Required='FALSE' Hidden='FALSE' />
+      <FieldRef ID='{074a872b-c6a3-4e49-8aa8-82b4408dbb2f}' Name='Dropped_x0020_Off_x0020_By' Required='FALSE' Hidden='FALSE' />
+      <FieldRef ID='{bca57f3a-4257-4765-905f-0db32ffb3c8c}' Name='AttendanceDateIn' Required='FALSE' Hidden='FALSE' />
+      <FieldRef ID='{60fbda1c-457c-4a20-90cf-e5ad31166aa6}' Name='Picked_x0020_Up_x0020_By' Required='FALSE' Hidden='FALSE' />
+      <FieldRef ID='{c481e5cf-98fa-4595-8f79-9fe18398b6ae}' Name='AttendanceDateOut' Required='FALSE' Hidden='FALSE' />
+      <FieldRef ID='{c042a256-787d-4a6f-8a8a-cf6ab767f12d}' Name='ContentType' Required='FALSE' Hidden='FALSE' />
+      <FieldRef ID='{3c9d245c-f5fa-415d-ab9d-d41f47f267b2}' Name='SukulFieldsRoom0' Required='FALSE' Hidden='TRUE' />
+      <FieldRef ID='{f3b0adf9-c1a2-4b02-920d-943fba4b3611}' Name='TaxCatchAll' Required='FALSE' Hidden='TRUE' />
+      <FieldRef ID='{8f6b6dd8-9357-4019-8172-966fcd502ed2}' Name='TaxCatchAllLabel' Required='FALSE' Hidden='TRUE' />
+      <FieldRef ID='{fa564e0f-0c70-4ab9-b863-0177e6ddd247}' Name='Title' Required='TRUE' Hidden='TRUE' ShowInNewForm='TRUE' ShowInEditForm='TRUE' />
+    </FieldRefs>
+  </ContentType>
+  
+  <!--Roster-->
+  <ContentType ID='0x01006551F70D7C0E3846A2CBD0B5A003181A' Name='Roster' Group='Sukul.Demo' Description='' Overwrite='TRUE' Inherits='FALSE'>
+    <FieldRefs>
+      <FieldRef ID='{c042a256-787d-4a6f-8a8a-cf6ab767f12d}' Name='ContentType' Required='FALSE' Hidden='FALSE' />
+      <FieldRef ID='{fa564e0f-0c70-4ab9-b863-0177e6ddd247}' Name='Title' Required='TRUE' Hidden='TRUE' ShowInNewForm='TRUE' ShowInEditForm='TRUE' />
+      <FieldRef ID='{ee39a06d-828c-40fa-9f8b-ad5d9924b2a9}' Name='Staff' Required='FALSE' Hidden='FALSE' />
+      <FieldRef ID='{afaa7c42-39de-44c8-8d09-6abd5e8f6750}' Name='Start_x0020_DateTime' Required='FALSE' Hidden='FALSE' />
+      <FieldRef ID='{c2155dd9-d5dc-49ab-8ada-2cd336936ab7}' Name='End_x0020_DateTime' Required='FALSE' Hidden='FALSE' />
+      <FieldRef ID='{3c9d245c-f5fa-415d-ab9d-d41f47f267b2}' Name='SukulFieldsRoom0' Required='FALSE' Hidden='TRUE' />
+      <FieldRef ID='{f3b0adf9-c1a2-4b02-920d-943fba4b3611}' Name='TaxCatchAll' Required='FALSE' Hidden='TRUE' />
+      <FieldRef ID='{8f6b6dd8-9357-4019-8172-966fcd502ed2}' Name='TaxCatchAllLabel' Required='FALSE' Hidden='TRUE' />
+      <FieldRef ID='{db8695a1-b73a-4caa-b3ba-5b287a90b3e8}' Name='Room' Required='FALSE' Hidden='FALSE' />
+    </FieldRefs>
+  </ContentType>
+
+
+
+</Elements>

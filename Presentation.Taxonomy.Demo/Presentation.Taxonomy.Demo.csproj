@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A373C50-747E-4BB0-9928-13857E1D3BD5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Presentation.Taxonomy.Demo</RootNamespace>
+    <AssemblyName>Presentation.Taxonomy.Demo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ActiveDeploymentConfiguration>No Activation</ActiveDeploymentConfiguration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="2ndLevelColumns\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a5e83f25-66cb-473c-bb85-e64cc6150edb}</SharePointProjectItemId>
+    </None>
+    <None Include="2ndLevelContentTypes\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c8e7565b-e965-4f27-b6a4-06382c4fe86a}</SharePointProjectItemId>
+    </None>
+    <None Include="BaseColumns\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ca922813-6c21-4d53-ad9d-12db0ae9cd81}</SharePointProjectItemId>
+    </None>
+    <None Include="BaseContentTypes\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8623e950-dfbc-47a9-bd45-c1f54322e62a}</SharePointProjectItemId>
+    </None>
+    <None Include="Columns\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{345a5bcd-24eb-4893-8e58-099aaedeaf32}</SharePointProjectItemId>
+    </None>
+    <None Include="ContentTypes\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{25d8c0d4-772d-4f3b-8776-93968c3e0d07}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Columns\Columns.feature">
+      <FeatureId>{b1db46da-7f1f-46a5-acef-b89d26e48078}</FeatureId>
+    </None>
+    <None Include="Features\ContentTypes\ContentTypes.feature">
+      <FeatureId>{e50913f8-d5e1-4e2b-89fd-cdbd806cdbcf}</FeatureId>
+    </None>
+    <None Include="Features\BaseColumns\BaseColumns.feature">
+      <FeatureId>{e71a5d0e-dc04-452c-87c6-29da0c109cbf}</FeatureId>
+    </None>
+    <None Include="Features\BaseContentTypes\BaseContentTypes.feature">
+      <FeatureId>{cfe56f09-8858-480f-9d65-0794c01b7e89}</FeatureId>
+    </None>
+    <None Include="Features\2ndLevelColumns\2ndLevelColumns.feature">
+      <FeatureId>{6ad1d0d8-b6e6-4b31-a4aa-cbf9ccfcd70f}</FeatureId>
+    </None>
+    <None Include="Features\2ndLevelContentTypes\2ndLevelContentTypes.feature">
+      <FeatureId>{1863af17-d60d-436c-86de-5b5cc1cbe4a7}</FeatureId>
+    </None>
+    <None Include="Features\jQuery\jQuery.feature">
+      <FeatureId>{a56dbbea-2c61-4e5f-bed9-ea1364e41c1c}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Lists\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9072dca4-0c28-4fe8-952e-e3f09cd9a786}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{edd1ca66-9658-411f-980e-d80ef2493701}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="PS\03 AddSiteColumnsToContentTypes.ps1" />
+    <None Include="PS\Config\ContentTypes.csv" />
+    <None Include="PS\Config\SiteColumns.csv" />
+    <None Include="PS\02 CreateContentTypes.ps1" />
+    <None Include="PS\01 CreateSiteColumns.ps1" />
+    <None Include="PS\Config\SiteColumnsContentTypes.csv" />
+    <None Include="PS\ExportContentTypes.ps1" />
+    <None Include="PS\ExportFields.ps1" />
+    <None Include="PS\GetSspId.ps1" />
+    <None Include="Resources\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f35cf199-fddf-49ce-92e2-8683ed0b72cc}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\html\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="2ndLevelColumns\Elements.xml" />
+    <Content Include="2ndLevelContentTypes\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="BaseColumns\Elements.xml" />
+    <Content Include="BaseContentTypes\Elements.xml" />
+    <Content Include="Columns\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ContentTypes\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Features\Columns\Columns.Template.xml">
+      <DependentUpon>Columns.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\ContentTypes\ContentTypes.Template.xml">
+      <DependentUpon>ContentTypes.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\BaseColumns\BaseColumns.Template.xml">
+      <DependentUpon>BaseColumns.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\BaseContentTypes\BaseContentTypes.Template.xml">
+      <DependentUpon>BaseContentTypes.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\2ndLevelColumns\2ndLevelColumns.Template.xml">
+      <DependentUpon>2ndLevelColumns.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\2ndLevelContentTypes\2ndLevelContentTypes.Template.xml">
+      <DependentUpon>2ndLevelContentTypes.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\jQuery\jQuery.Template.xml">
+      <DependentUpon>jQuery.feature</DependentUpon>
+    </Content>
+    <Content Include="Lists\Elements.xml" />
+    <Content Include="PS\Notes.txt" />
+    <Content Include="Resources\css\jQueryUI\jquery-ui.min.css" />
+    <Content Include="Resources\css\jQueryUI\jquery-ui.theme.css" />
+    <Content Include="Resources\Elements.xml" />
+    <Content Include="Resources\image\jQueryUI\animated-overlay.gif" />
+    <Content Include="Resources\image\jQueryUI\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Resources\image\jQueryUI\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Resources\image\jQueryUI\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Resources\image\jQueryUI\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Resources\image\jQueryUI\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Resources\image\jQueryUI\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Resources\image\jQueryUI\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Resources\image\jQueryUI\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Resources\image\jQueryUI\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Resources\image\jQueryUI\ui-icons_222222_256x240.png" />
+    <Content Include="Resources\image\jQueryUI\ui-icons_228ef1_256x240.png" />
+    <Content Include="Resources\image\jQueryUI\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Resources\image\jQueryUI\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Resources\image\jQueryUI\ui-icons_ffffff_256x240.png" />
+    <Content Include="Resources\js\jquery-1.11.1.min.js" />
+    <Content Include="Resources\js\jquery-ui-1.11.0\jquery-ui.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- http://www.instantquick.com/index.php/correctly-provisioning-managed-metadata-columns?c=elumenotion-blog-archive/random-whatnot -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Columns">
+  </Module>
+
+  <!-- Picked Up By -->
+  <Field Type="Lookup" DisplayName="Picked Up By" Description="Person who picked up child" Required="FALSE" EnforceUniqueValues="FALSE" List="Lists/Guardians" WebId="~sitecollection" ShowField="FullName1" UnlimitedLengthInDocumentLibrary="FALSE" Group="Sukul.Demo" ID="{60fbda1c-457c-4a20-90cf-e5ad31166aa6}" SourceID="{71873de0-8937-47ab-a03e-1a5a66dfd39a}" StaticName="Picked_x0020_Up_x0020_By" Name="Picked_x0020_Up_x0020_By" Overwrite="TRUE" />
+  <!-- Dropped Off By -->
+  <Field Type="Lookup" DisplayName="Dropped Off By" Description="Person who dropped off child" Required="FALSE" EnforceUniqueValues="FALSE" List="Lists/Guardians" WebId="~sitecollection" ShowField="FullName1" UnlimitedLengthInDocumentLibrary="FALSE" Group="Sukul.Demo" ID="{074a872b-c6a3-4e49-8aa8-82b4408dbb2f}" SourceID="{71873de0-8937-47ab-a03e-1a5a66dfd39a}" StaticName="Dropped_x0020_Off_x0020_By" Name="Dropped_x0020_Off_x0020_By" Overwrite="TRUE"/>
+  <!--Child-->
+  <Field Type="Lookup" DisplayName="Child" Required="FALSE" EnforceUniqueValues="FALSE" List="Lists/Kids" Overwrite="TRUE" WebId="~sitecollection" ShowField="FullName1" UnlimitedLengthInDocumentLibrary="FALSE" Group="Sukul.Demo" ID="{b65a04e7-9daa-49e0-bc73-1209df36e2b2}" SourceID="{71873de0-8937-47ab-a03e-1a5a66dfd39a}" StaticName="Child" Name="Child" />
+  <!--Staff-->
+  <Field Type="Lookup" DisplayName="Staff" Required="FALSE" Overwrite="TRUE" EnforceUniqueValues="FALSE" List="Lists/Staff" WebId="~sitecollection" ShowField="FullName1" UnlimitedLengthInDocumentLibrary="FALSE" Group="Sukul.Demo" ID="{ee39a06d-828c-40fa-9f8b-ad5d9924b2a9}" SourceID="{71873de0-8937-47ab-a03e-1a5a66dfd39a}" StaticName="Staff" Name="Staff" />
+
+</Elements>

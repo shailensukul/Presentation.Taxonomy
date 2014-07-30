@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="BaseColumns">5fb64256-6264-4b5d-997b-588c2bf42715
+  </Module>
+  <!--Room-->
+  <Field Type="TaxonomyFieldType" Group="Sukul.Demo" DisplayName="Room" ShowField="Term1033" Required="FALSE" EnforceUniqueValues="FALSE" ID="{db8695a1-b73a-4caa-b3ba-5b287a90b3e8}" StaticName="SukulFieldsRoom"
+         Name="Room" SourceID="{2B9FE58F-2C41-4403-950D-FFFCDA0ECB5E}"
+         List="Lists/TaxonomyHiddenList" WebId="~sitecollection" Version="2">
+    <Default></Default>
+    <Customization>
+      <ArrayOfProperty>
+        <Property>
+          <Name>SspId</Name>
+          <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">5fb64256-6264-4b5d-997b-588c2bf42715</Value>
+        </Property>
+        <Property>
+          <Name>GroupId</Name>
+        </Property>
+        <Property>
+          <Name>TermSetId</Name>
+          <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">f6d8e1b6-78c7-4f85-9773-3ba601ad0196</Value>
+        </Property>
+        <Property>
+          <Name>AnchorId</Name>
+          <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+        </Property>
+        <Property>
+          <Name>UserCreated</Name>
+          <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+        </Property>
+        <Property>
+          <Name>Open</Name>
+          <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+        </Property>
+        <Property>
+          <Name>TextField</Name>
+          <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{3c9d245c-f5fa-415d-ab9d-d41f47f267b2}</Value>
+        </Property>
+        <Property>
+          <Name>IsPathRendered</Name>
+          <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+        </Property>
+        <Property>
+          <Name>IsKeyword</Name>
+          <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+        </Property>
+        <Property>
+          <Name>TargetTemplate</Name>
+        </Property>
+        <Property>
+          <Name>CreateValuesInEditForm</Name>
+          <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+        </Property>
+        <Property>
+          <Name>FilterAssemblyStrongName</Name>
+          <Value xmlns:q10="http://www.w3.org/2001/XMLSchema" p4:type="q10:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value>
+        </Property>
+        <Property>
+          <Name>FilterClassName</Name>
+          <Value xmlns:q11="http://www.w3.org/2001/XMLSchema" p4:type="q11:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value>
+        </Property>
+        <Property>
+          <Name>FilterMethodName</Name>
+          <Value xmlns:q12="http://www.w3.org/2001/XMLSchema" p4:type="q12:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">GetFilteringHtml</Value>
+        </Property>
+        <Property>
+          <Name>FilterJavascriptProperty</Name>
+          <Value xmlns:q13="http://www.w3.org/2001/XMLSchema" p4:type="q13:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">FilteringJavascript</Value>
+        </Property>
+      </ArrayOfProperty>
+    </Customization>
+  </Field>
+  <Field Type="Note" DisplayName="SukulFieldsRoom_0" StaticName="SukulFieldsRoom0" Name="SukulFieldsRoom0" ID="{3C9D245C-F5FA-415D-AB9D-D41F47F267B2}" ShowInViewForms="FALSE" Required="FALSE"
+         Hidden="TRUE" CanToggleHidden="TRUE" SourceID="{2B9FE58F-2C41-4403-950D-FFFCDA0ECB5E}" Overwrite="TRUE" />
+  <!--PottyType-->
+  <Field Type="TaxonomyFieldType" DisplayName="PottyType" List="Lists/TaxonomyHiddenList" WebId="~sitecollection" ShowField="Term1033" Required="TRUE" EnforceUniqueValues="FALSE" Group="Sukul.Demo"
+         ID="{7eea12c2-4d4e-40d9-b6b6-45ea39b79c94}" SourceID="{71873de0-8937-47ab-a03e-1a5a66dfd39a}" StaticName="PottyType" Name="PottyType" Version="1" Overwrite="TRUE">
+    <Default></Default>
+    <Customization>
+      <ArrayOfProperty>
+        <Property>
+          <Name>SspId</Name>
+          <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">5fb64256-6264-4b5d-997b-588c2bf42715</Value>
+        </Property>
+        <Property>
+          <Name>GroupId</Name>
+        </Property>
+        <Property>
+          <Name>TermSetId</Name>
+          <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">939e25a2-ca80-4a4d-895c-ffa2790fd23d</Value>
+        </Property>
+        <Property>
+          <Name>AnchorId</Name>
+          <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+        </Property>
+        <Property>
+          <Name>UserCreated</Name>
+          <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+        </Property>
+        <Property>
+          <Name>Open</Name>
+          <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+        </Property>
+        <Property>
+          <Name>TextField</Name>
+          <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{27226dd6-a0ed-47dc-88c4-7092c289c362}</Value>
+        </Property>
+        <Property>
+          <Name>IsPathRendered</Name>
+          <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+        </Property>
+        <Property>
+          <Name>IsKeyword</Name>
+          <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+        </Property>
+        <Property>
+          <Name>TargetTemplate</Name>
+        </Property>
+        <Property>
+          <Name>CreateValuesInEditForm</Name>
+          <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+        </Property>
+        <Property>
+          <Name>FilterAssemblyStrongName</Name>
+          <Value xmlns:q10="http://www.w3.org/2001/XMLSchema" p4:type="q10:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value>
+        </Property>
+        <Property>
+          <Name>FilterClassName</Name>
+          <Value xmlns:q11="http://www.w3.org/2001/XMLSchema" p4:type="q11:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value>
+        </Property>
+        <Property>
+          <Name>FilterMethodName</Name>
+          <Value xmlns:q12="http://www.w3.org/2001/XMLSchema" p4:type="q12:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">GetFilteringHtml</Value>
+        </Property>
+        <Property>
+          <Name>FilterJavascriptProperty</Name>
+          <Value xmlns:q13="http://www.w3.org/2001/XMLSchema" p4:type="q13:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">FilteringJavascript</Value>
+        </Property>
+      </ArrayOfProperty>
+    </Customization>
+  </Field>
+  <Field Type="Note" DisplayName="PottyType_0" StaticName="neea12c24d4e40d9b6b645ea39b79c94" Name="neea12c24d4e40d9b6b645ea39b79c94" ID="{27226dd6-a0ed-47dc-88c4-7092c289c362}" ShowInViewForms="FALSE" Required="FALSE"
+         Hidden="TRUE" CanToggleHidden="TRUE" SourceID="{71873de0-8937-47ab-a03e-1a5a66dfd39a}" Overwrite="TRUE"/>
+  <!--PottyInDiaper-->
+  <Field Type="Boolean" DisplayName="PottyInDiaper" EnforceUniqueValues="FALSE" Indexed="FALSE" Overwrite="TRUE" Group="Sukul.Demo" ID="{c920f99c-2602-4c1c-9c74-62708612abe5}" SourceID="{71873de0-8937-47ab-a03e-1a5a66dfd39a}" StaticName="PottyInDiaper" Name="PottyInDiaper">
+    <Default>1</Default>
+  </Field>
+  <!--DateOfBirth-->
+  <Field Type="DateTime" DisplayName="DateOfBirth" Description="Date of Birth" Required="TRUE" EnforceUniqueValues="FALSE" Overwrite="TRUE" Indexed="FALSE" Format="DateOnly" Group="Sukul.Demo" FriendlyDisplayFormat="Disabled" ID="{42b95a14-8366-4008-aa89-1dbb77a2b873}" SourceID="{71873de0-8937-47ab-a03e-1a5a66dfd39a}" StaticName="DateOfBirth" Name="DateOfBirth"></Field>
+  <!-- AttendanceDateIn -->
+  <Field Type="DateTime" DisplayName="AttendanceDateIn" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateTime" Group="Sukul.Demo" Overwrite="TRUE" FriendlyDisplayFormat="Disabled" ID="{bca57f3a-4257-4765-905f-0db32ffb3c8c}" SourceID="{71873de0-8937-47ab-a03e-1a5a66dfd39a}" StaticName="AttendanceDateIn" Name="AttendanceDateIn" CalType="0" Version="1"></Field>
+  <!--IsStaffRoomLeader-->
+  <Field Type="Boolean" DisplayName="IsStaffRoomLeader" Description="Is Staff a Room Leader" EnforceUniqueValues="FALSE" Indexed="FALSE" Group="Sukul.Demo" ID="{1615cd6e-7f8a-4494-a3a3-942e82dd53c8}" Overwrite="TRUE" SourceID="{71873de0-8937-47ab-a03e-1a5a66dfd39a}" StaticName="IsStaffRoomLeader" Name="IsStaffRoomLeader">
+    <Default>0</Default>
+  </Field>
+  <!--GenderOfChild-->
+  <Field Type="Choice" DisplayName="GenderOfChild" Description="Gender of child" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="RadioButtons" FillInChoice="FALSE" Group="Sukul.Demo" ID="{f7ac699d-93a9-42ed-a3c5-8e42e8b05c96}" Overwrite="TRUE" SourceID="{71873de0-8937-47ab-a03e-1a5a66dfd39a}" StaticName="GenderOfChild" Name="GenderOfChild">
+    <Default>Male</Default>
+    <CHOICES>
+      <CHOICE>Male</CHOICE>
+      <CHOICE>Female</CHOICE>
+    </CHOICES>
+  </Field>
+  <!--AttendanceDateOut-->
+  <Field Type="DateTime" DisplayName="AttendanceDateOut" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateTime" Group="Sukul.Demo" FriendlyDisplayFormat="Disabled" ID="{c481e5cf-98fa-4595-8f79-9fe18398b6ae}" Overwrite="TRUE" SourceID="{71873de0-8937-47ab-a03e-1a5a66dfd39a}" StaticName="AttendanceDateOut" Name="AttendanceDateOut" CalType="0" Version="1"></Field>
+  <!--LastName-->
+  <Field Type="Text" DisplayName="LastName" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" Group="Sukul.Demo" ID="{3ac38149-6751-4f6c-b85e-09541a696fc7}" Overwrite="TRUE" SourceID="{71873de0-8937-47ab-a03e-1a5a66dfd39a}" StaticName="LastName" Name="LastName"></Field>
+  <!--FirstName-->
+  <Field Type="Text" DisplayName="FirstName" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" Group="Sukul.Demo" ID="{e1b2b669-2302-43ef-8e77-828f30fe5521}" Overwrite="TRUE" SourceID="{71873de0-8937-47ab-a03e-1a5a66dfd39a}" StaticName="FirstName1" Name="FirstName1"></Field>
+  <!--EmailAddress-->
+  <Field Type="Text" DisplayName="EmailAddress" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" Group="Sukul.Demo" ID="{64a42df2-a554-48d1-a4bb-1e7781ca1769}" Overwrite="TRUE" SourceID="{71873de0-8937-47ab-a03e-1a5a66dfd39a}" StaticName="EmailAddress" Name="EmailAddress"></Field>
+  <!--ContactPhone-->
+  <Field Type="Note" DisplayName="ContactPhone" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RichText="FALSE" Sortable="FALSE" Group="Sukul.Demo" ID="{2112affc-de2f-4d1f-847c-8daa72ef97a8}" Overwrite="TRUE" SourceID="{71873de0-8937-47ab-a03e-1a5a66dfd39a}" StaticName="ContactPhone" Name="ContactPhone"></Field>
+  <!--GuardianType-->
+  <Field Type="TaxonomyFieldType" DisplayName="GuardianType" List="Lists/TaxonomyHiddenList" WebId="~sitecollection" Overwrite="TRUE" ShowField="Term1033" Required="TRUE" EnforceUniqueValues="FALSE" Group="Sukul.Demo" ID="{bfbf5341-21f0-4771-a1fd-548429abe30b}" SourceID="{71873de0-8937-47ab-a03e-1a5a66dfd39a}" StaticName="GuardianType" Name="GuardianType" Version="1">
+    <Default></Default>
+    <Customization>
+      <ArrayOfProperty>
+        <Property>
+          <Name>SspId</Name>
+          <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">5fb64256-6264-4b5d-997b-588c2bf42715</Value>
+        </Property>
+        <Property>
+          <Name>GroupId</Name>
+        </Property>
+        <Property>
+          <Name>TermSetId</Name>
+          <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">bfe6d355-4566-491a-8c57-fde0233e56a2</Value>
+        </Property>
+        <Property>
+          <Name>AnchorId</Name>
+          <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+        </Property>
+        <Property>
+          <Name>UserCreated</Name>
+          <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+        </Property>
+        <Property>
+          <Name>Open</Name>
+          <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+        </Property>
+        <Property>
+          <Name>TextField</Name>
+          <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{d2c22c6b-503c-4fae-b42c-da61b7e42e81}</Value>
+        </Property>
+        <Property>
+          <Name>IsPathRendered</Name>
+          <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+        </Property>
+        <Property>
+          <Name>IsKeyword</Name>
+          <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+        </Property>
+        <Property>
+          <Name>TargetTemplate</Name>
+        </Property>
+        <Property>
+          <Name>CreateValuesInEditForm</Name>
+          <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+        </Property>
+        <Property>
+          <Name>FilterAssemblyStrongName</Name>
+          <Value xmlns:q10="http://www.w3.org/2001/XMLSchema" p4:type="q10:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value>
+        </Property>
+        <Property>
+          <Name>FilterClassName</Name>
+          <Value xmlns:q11="http://www.w3.org/2001/XMLSchema" p4:type="q11:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value>
+        </Property>
+        <Property>
+          <Name>FilterMethodName</Name>
+          <Value xmlns:q12="http://www.w3.org/2001/XMLSchema" p4:type="q12:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">GetFilteringHtml</Value>
+        </Property>
+        <Property>
+          <Name>FilterJavascriptProperty</Name>
+          <Value xmlns:q13="http://www.w3.org/2001/XMLSchema" p4:type="q13:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">FilteringJavascript</Value>
+        </Property>
+      </ArrayOfProperty>
+    </Customization>
+  </Field>
+  <Field Type="Note" DisplayName="GuardianType_0" StaticName="bfbf534121f04771a1fd548429abe30b" Name="bfbf534121f04771a1fd548429abe30b" ID="{d2c22c6b-503c-4fae-b42c-da61b7e42e81}" ShowInViewForms="FALSE" Required="FALSE" Overwrite="TRUE" Hidden="TRUE" CanToggleHidden="TRUE" SourceID="{71873de0-8937-47ab-a03e-1a5a66dfd39a}" />
+  <!--FullName-->
+  <Field Type="Calculated" DisplayName="FullName" EnforceUniqueValues="FALSE" Overwrite="TRUE" Indexed="FALSE" Format="DateOnly" LCID="1033" ResultType="Text" ReadOnly="TRUE" Group="Sukul.Demo" ID="{ae05e3c0-5f0a-4e4d-80a7-1d02207da877}" SourceID="{71873de0-8937-47ab-a03e-1a5a66dfd39a}" StaticName="FullName1" Name="FullName1" Required="FALSE" Version="2">
+    <Formula>=FirstName1&amp;" "&amp;LastName</Formula>
+    <FieldRefs>
+      <FieldRef Name="FirstName1" ID="{e1b2b669-2302-43ef-8e77-828f30fe5521}" />
+      <FieldRef Name="LastName" ID="{3ac38149-6751-4f6c-b85e-09541a696fc7}" />
+    </FieldRefs>
+  </Field>
+  <!--Date of Event-->
+  <Field Type="DateTime" DisplayName="Date Of Event" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateTime" Overwrite="TRUE" Group="Sukul.Demo" FriendlyDisplayFormat="Disabled" ID="{dc0f6741-0705-48f2-9669-7c19a1f63eae}" SourceID="{71873de0-8937-47ab-a03e-1a5a66dfd39a}" StaticName="Date_x0020_Of_x0020_Event" Name="Date_x0020_Of_x0020_Event">
+    <Default>[today]</Default>
+  </Field>
+  <!--Start Datetime-->
+  <Field Type="DateTime" DisplayName="Start DateTime" Required="FALSE" EnforceUniqueValues="FALSE" Overwrite="TRUE" Indexed="FALSE" Format="DateTime" Group="Sukul.Demo" FriendlyDisplayFormat="Disabled" ID="{afaa7c42-39de-44c8-8d09-6abd5e8f6750}" SourceID="{71873de0-8937-47ab-a03e-1a5a66dfd39a}" StaticName="Start_x0020_DateTime" Name="Start_x0020_DateTime" CalType="0" Version="1"></Field>
+  <!--End Datetime-->
+  <Field Type="DateTime" DisplayName="End DateTime" Required="FALSE" EnforceUniqueValues="FALSE" Overwrite="TRUE" Indexed="FALSE" Format="DateTime" Group="Sukul.Demo" FriendlyDisplayFormat="Disabled" ID="{c2155dd9-d5dc-49ab-8ada-2cd336936ab7}" SourceID="{71873de0-8937-47ab-a03e-1a5a66dfd39a}" StaticName="End_x0020_DateTime" Name="End_x0020_DateTime" CalType="0" Version="1"></Field>
+
+</Elements>

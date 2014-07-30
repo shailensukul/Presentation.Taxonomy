@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="2ndLevelColumns">
+  </Module>
+  <!--Child's Guardian-->
+  <Field Type="LookupMulti" DisplayName="Child's Guardian" Required="FALSE" Overwrite="TRUE" EnforceUniqueValues="FALSE" List="Lists/Guardians" WebId="~sitecollection" ShowField="FullName1" UnlimitedLengthInDocumentLibrary="FALSE" Group="Sukul.Demo" ID="{cdd0bf46-739e-434c-b6e7-e3338b17c352}" SourceID="{71873de0-8937-47ab-a03e-1a5a66dfd39a}" StaticName="Child_x0027_s_x0020_Guardian" Name="Child_x0027_s_x0020_Guardian" Mult="TRUE" Sortable="FALSE" Version="5" />
+
+</Elements>
