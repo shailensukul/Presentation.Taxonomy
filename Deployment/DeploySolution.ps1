@@ -1,4 +1,4 @@
-$siteCollectionUrl = "https://sukulsharepoint.sharepoint.com/sites/demo"
+$siteCollectionUrl = "https://sukulsharepoint-admin.sharepoint.com"
 $login = "shailen@spdev.shailensukul.com"
 $password = "Sh@rep0int"
  
