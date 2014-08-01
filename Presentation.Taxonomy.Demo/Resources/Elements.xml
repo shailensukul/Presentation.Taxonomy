@@ -2,28 +2,35 @@
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Module Name="Resources">
     <!-- JS -->
-    <File Path="Resources\js\jquery-ui-1.11.0\jquery-ui.js" Url="Style Library/js/jquery-ui-1.11.0/jquery-ui.js" />
-    <File Path="Resources\js\jquery-1.11.1.min.js" Url="Style Library/js/jquery-1.11.1.min.js" />
+    <File Path="Resources\js\jquery-ui-1.11.0\jquery-ui.js" Url="Style Library/js/jquery-ui-1.11.0/jquery-ui.js" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="Resources\js\jquery-1.11.1.min.js" Url="Style Library/js/jquery-1.11.1.min.js" IgnoreIfAlreadyExists="TRUE"/>
 
     <!-- CSS -->
-    <File Path="Resources\css\jQueryUI\jquery-ui.min.css" Url="Style Library/css/jQueryUI/jquery-ui.min.css" />
-    <File Path="Resources\css\jQueryUI\jquery-ui.theme.css" Url="Style Library/css/jQueryUI/jquery-ui.theme.css" />
+    <File Path="Resources\css\jQueryUI\jquery-ui.min.css" Url="Style Library/css/jQueryUI/jquery-ui.min.css" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="Resources\css\jQueryUI\jquery-ui.theme.css" Url="Style Library/css/jQueryUI/jquery-ui.theme.css" IgnoreIfAlreadyExists="TRUE"/>
     
     <!-- Image -->
-    <File Path="Resources\image\jQueryUI\animated-overlay.gif" Url="Style Library/image/jQueryUI/animated-overlay.gif" />
-    <File Path="Resources\image\jQueryUI\ui-bg_diagonals-thick_18_b81900_40x40.png" Url="Style Library/image/jQueryUI/ui-bg_diagonals-thick_18_b81900_40x40.png" />
-    <File Path="Resources\image\jQueryUI\ui-bg_diagonals-thick_20_666666_40x40.png" Url="Style Library/image/jQueryUI/ui-bg_diagonals-thick_20_666666_40x40.png" />
-    <File Path="Resources\image\jQueryUI\ui-bg_flat_10_000000_40x100.png" Url="Style Library/image/jQueryUI/ui-bg_flat_10_000000_40x100.png" />
-    <File Path="Resources\image\jQueryUI\ui-bg_glass_100_f6f6f6_1x400.png" Url="Style Library/image/jQueryUI/ui-bg_glass_100_f6f6f6_1x400.png" />
-    <File Path="Resources\image\jQueryUI\ui-bg_glass_100_fdf5ce_1x400.png" Url="Style Library/image/jQueryUI/ui-bg_glass_100_fdf5ce_1x400.png" />
-    <File Path="Resources\image\jQueryUI\ui-bg_glass_65_ffffff_1x400.png" Url="Style Library/image/jQueryUI/ui-bg_glass_65_ffffff_1x400.png" />
-    <File Path="Resources\image\jQueryUI\ui-bg_gloss-wave_35_f6a828_500x100.png" Url="Style Library/image/jQueryUI/ui-bg_gloss-wave_35_f6a828_500x100.png" />
-    <File Path="Resources\image\jQueryUI\ui-bg_highlight-soft_100_eeeeee_1x100.png" Url="Style Library/image/jQueryUI/ui-bg_highlight-soft_100_eeeeee_1x100.png" />
-    <File Path="Resources\image\jQueryUI\ui-bg_highlight-soft_75_ffe45c_1x100.png" Url="Style Library/image/jQueryUI/ui-bg_highlight-soft_75_ffe45c_1x100.png" />
-    <File Path="Resources\image\jQueryUI\ui-icons_222222_256x240.png" Url="Style Library/image/jQueryUI/ui-icons_222222_256x240.png" />
-    <File Path="Resources\image\jQueryUI\ui-icons_228ef1_256x240.png" Url="Style Library/image/jQueryUI/ui-icons_228ef1_256x240.png" />
-    <File Path="Resources\image\jQueryUI\ui-icons_ef8c08_256x240.png" Url="Style Library/image/jQueryUI/ui-icons_ef8c08_256x240.png" />
-    <File Path="Resources\image\jQueryUI\ui-icons_ffd27a_256x240.png" Url="Style Library/image/jQueryUI/ui-icons_ffd27a_256x240.png" />
-    <File Path="Resources\image\jQueryUI\ui-icons_ffffff_256x240.png" Url="Style Library/image/jQueryUI/ui-icons_ffffff_256x240.png" />
+    <File Path="Resources\image\jQueryUI\animated-overlay.gif" Url="Style Library/image/jQueryUI/animated-overlay.gif" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="Resources\image\jQueryUI\ui-bg_diagonals-thick_18_b81900_40x40.png" Url="Style Library/image/jQueryUI/ui-bg_diagonals-thick_18_b81900_40x40.png" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="Resources\image\jQueryUI\ui-bg_diagonals-thick_20_666666_40x40.png" Url="Style Library/image/jQueryUI/ui-bg_diagonals-thick_20_666666_40x40.png" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="Resources\image\jQueryUI\ui-bg_flat_10_000000_40x100.png" Url="Style Library/image/jQueryUI/ui-bg_flat_10_000000_40x100.png" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="Resources\image\jQueryUI\ui-bg_glass_100_f6f6f6_1x400.png" Url="Style Library/image/jQueryUI/ui-bg_glass_100_f6f6f6_1x400.png" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="Resources\image\jQueryUI\ui-bg_glass_100_fdf5ce_1x400.png" Url="Style Library/image/jQueryUI/ui-bg_glass_100_fdf5ce_1x400.png" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="Resources\image\jQueryUI\ui-bg_glass_65_ffffff_1x400.png" Url="Style Library/image/jQueryUI/ui-bg_glass_65_ffffff_1x400.png" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="Resources\image\jQueryUI\ui-bg_gloss-wave_35_f6a828_500x100.png" Url="Style Library/image/jQueryUI/ui-bg_gloss-wave_35_f6a828_500x100.png" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="Resources\image\jQueryUI\ui-bg_highlight-soft_100_eeeeee_1x100.png" Url="Style Library/image/jQueryUI/ui-bg_highlight-soft_100_eeeeee_1x100.png" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="Resources\image\jQueryUI\ui-bg_highlight-soft_75_ffe45c_1x100.png" Url="Style Library/image/jQueryUI/ui-bg_highlight-soft_75_ffe45c_1x100.png" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="Resources\image\jQueryUI\ui-icons_222222_256x240.png" Url="Style Library/image/jQueryUI/ui-icons_222222_256x240.png" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="Resources\image\jQueryUI\ui-icons_228ef1_256x240.png" Url="Style Library/image/jQueryUI/ui-icons_228ef1_256x240.png" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="Resources\image\jQueryUI\ui-icons_ef8c08_256x240.png" Url="Style Library/image/jQueryUI/ui-icons_ef8c08_256x240.png" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="Resources\image\jQueryUI\ui-icons_ffd27a_256x240.png" Url="Style Library/image/jQueryUI/ui-icons_ffd27a_256x240.png" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="Resources\image\jQueryUI\ui-icons_ffffff_256x240.png" Url="Style Library/image/jQueryUI/ui-icons_ffffff_256x240.png" IgnoreIfAlreadyExists="TRUE"/>
+    
+    <!-- Custom Scripts -->
+    <File Path="Resources\js\Staff.js" Url="Site Assets/SUKUL/js/Staff.js" IgnoreIfAlreadyExists="TRUE"/>
+    
+    <!-- Partial Pages -->
+    <File Path="Resources\html\RoomLeaders.html" Url="Site Assets/SUKUL/partial/RoomLeaders.html" IgnoreIfAlreadyExists="TRUE"/>
+
   </Module>
 </Elements>

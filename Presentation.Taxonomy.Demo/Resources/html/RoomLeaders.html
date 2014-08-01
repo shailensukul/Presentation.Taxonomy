@@ -1,0 +1,12 @@
+﻿<script type="text/javascript" src="/sites/demo/Style%20Library/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/sites/demo/Style%20Library/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/sites/demo/SiteAssets/SUKUL/js/Staff.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var staff = new SUKUL.Reports.Staff();
+        SP.SOD.executeFunc('sp.js', 'SP.ClientContext', staff.Execute);
+    });
+</script>
+
+<div id="divContentContainer"></div>
+

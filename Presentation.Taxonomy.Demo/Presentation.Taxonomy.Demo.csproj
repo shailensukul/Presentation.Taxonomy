@@ -116,9 +116,7 @@
       <SharePointProjectItemId>{f35cf199-fddf-49ce-92e2-8683ed0b72cc}</SharePointProjectItemId>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\html\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="2ndLevelColumns\Elements.xml" />
     <Content Include="2ndLevelContentTypes\Elements.xml">
@@ -157,6 +155,7 @@
     <Content Include="Resources\css\jQueryUI\jquery-ui.min.css" />
     <Content Include="Resources\css\jQueryUI\jquery-ui.theme.css" />
     <Content Include="Resources\Elements.xml" />
+    <Content Include="Resources\html\RoomLeaders.html" />
     <Content Include="Resources\image\jQueryUI\animated-overlay.gif" />
     <Content Include="Resources\image\jQueryUI\ui-bg_diagonals-thick_18_b81900_40x40.png" />
     <Content Include="Resources\image\jQueryUI\ui-bg_diagonals-thick_20_666666_40x40.png" />
@@ -174,6 +173,7 @@
     <Content Include="Resources\image\jQueryUI\ui-icons_ffffff_256x240.png" />
     <Content Include="Resources\js\jquery-1.11.1.min.js" />
     <Content Include="Resources\js\jquery-ui-1.11.0\jquery-ui.js" />
+    <Content Include="Resources\js\Staff.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
