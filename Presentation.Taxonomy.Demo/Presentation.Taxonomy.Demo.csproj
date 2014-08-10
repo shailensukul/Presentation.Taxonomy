@@ -110,6 +110,7 @@
     <None Include="PS\01 CreateSiteColumns.ps1" />
     <None Include="PS\Config\SiteColumnsContentTypes.csv" />
     <None Include="PS\ExportContentTypes.ps1" />
+    <None Include="PS\ExportFieldO365.ps1" />
     <None Include="PS\ExportFields.ps1" />
     <None Include="PS\GetSspId.ps1" />
     <None Include="Resources\SharePointProjectItem.spdata">
