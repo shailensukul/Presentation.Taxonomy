@@ -118,9 +118,7 @@
     <None Include="PS\Export-Import-SharePoint-List.ps1" />
     <None Include="PS\Export.Content.Types.ps1" />
     <None Include="PS\Export.Fields.ps1" />
-    <None Include="PS\ExportContentTypes.ps1" />
-    <None Include="PS\ExportFields.ps1" />
-    <None Include="PS\ExportLists.ps1" />
+    <None Include="PS\Export.Lists.ps1" />
     <None Include="PS\GetSspId.ps1" />
     <None Include="Resources\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{f35cf199-fddf-49ce-92e2-8683ed0b72cc}</SharePointProjectItemId>
