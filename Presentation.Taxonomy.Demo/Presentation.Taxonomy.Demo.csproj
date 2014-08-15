@@ -97,6 +97,12 @@
     <None Include="Lists\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{9072dca4-0c28-4fe8-952e-e3f09cd9a786}</SharePointProjectItemId>
     </None>
+    <None Include="Lists\Weather\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a4e29b2e-8f23-4fb9-a4d5-377f8beff18a}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\Weather\WeatherInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b381da13-9e47-42e9-b0e2-230b8e16a1ee}</SharePointProjectItemId>
+    </None>
     <None Include="Package\Package.package">
       <PackageId>{edd1ca66-9658-411f-980e-d80ef2493701}</PackageId>
     </None>
@@ -109,8 +115,12 @@
     <None Include="PS\02 CreateContentTypes.ps1" />
     <None Include="PS\01 CreateSiteColumns.ps1" />
     <None Include="PS\Config\SiteColumnsContentTypes.csv" />
+    <None Include="PS\Export-Import-SharePoint-List.ps1" />
+    <None Include="PS\Export.Content.Types.ps1" />
+    <None Include="PS\Export.Fields.ps1" />
     <None Include="PS\ExportContentTypes.ps1" />
     <None Include="PS\ExportFields.ps1" />
+    <None Include="PS\ExportLists.ps1" />
     <None Include="PS\GetSspId.ps1" />
     <None Include="Resources\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{f35cf199-fddf-49ce-92e2-8683ed0b72cc}</SharePointProjectItemId>
@@ -152,6 +162,10 @@
       <DependentUpon>jQuery.feature</DependentUpon>
     </Content>
     <Content Include="Lists\Elements.xml" />
+    <Content Include="Lists\Weather\Elements.xml" />
+    <Content Include="Lists\Weather\Schema.xml" />
+    <Content Include="Lists\Weather\WeatherInstance\Elements.xml" />
+    <Content Include="PS\Input.xml" />
     <Content Include="Resources\css\jQueryUI\jquery-ui.min.css" />
     <Content Include="Resources\css\jQueryUI\jquery-ui.theme.css" />
     <Content Include="Resources\Elements.xml" />
