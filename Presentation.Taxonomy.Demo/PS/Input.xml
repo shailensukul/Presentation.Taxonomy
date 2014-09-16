@@ -1,0 +1,6 @@
+﻿<SharePointCredentials>
+  <Url>https://sukulsharepoint.sharepoint.com/sites/demo</Url>
+  <UserID>shailen@spdev.shailensukul.com</UserID>
+  <Password>Sh@rep0int</Password>
+  <ContentTypeGroup>Sukul.Demo</ContentTypeGroup>
+</SharePointCredentials>
