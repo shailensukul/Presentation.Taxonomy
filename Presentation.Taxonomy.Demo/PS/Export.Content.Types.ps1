@@ -25,7 +25,7 @@ Add-Type -Path "Microsoft.SharePoint.Client.dll"
 Add-Type -Path "Microsoft.SharePoint.Client.Runtime.dll"
 Add-Type -Path "Microsoft.SharePoint.Client.Taxonomy.dll"
 
-$xmlFilePath = "F:\Code\Presentation.Taxonomy\Presentation.Taxonomy.Demo\PS\Script-ContentTypes.xml"
+$xmlFilePath = "c:\temp\Script-ContentTypes.xml"
 #Create Export Files
 New-Item $xmlFilePath -type file -force
 #Export Site Columns to XML file
