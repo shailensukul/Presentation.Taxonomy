@@ -34,7 +34,11 @@ Add-Content $xmlFilePath "<Elements xmlns=`"http://schemas.microsoft.com/sharepo
 
 # connect/authenticate to SharePoint Online and get ClientContext object.. 
 $sCtx = New-Object Microsoft.SharePoint.Client.ClientContext($sUrl)
-$sCredentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($sAdmin, $sSecurePwd)
+if ($inputFile.SharePointCredentials.IsSiteSharePointOnline -eq $true) {
+	$sCredentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($sAdmin, $sSecurePwd)
+} else {
+	$sCredentials = New-Object System.Net.NetworkCredential($sAdmin, $sSecurePwd)
+}
 $sCtx.Credentials = $sCredentials
 
 if (!$sCtx.ServerObjectIsNull.Value) 

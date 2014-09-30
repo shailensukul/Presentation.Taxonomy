@@ -19,7 +19,7 @@ $sPwd = $inputFile.SharePointCredentials.Password
 
 Write-Host $sUrl
 # 3) What Site Column Group do you want to synchronize?
-$sGroupName = "Sukul.Demo"
+$sGroupName = $inputFile.SharePointCredentials.SiteGroup
 
 ## Stop here
 $lcid = "1033"
@@ -40,8 +40,13 @@ Add-Content $xmlFilePath "`n<Fields>"
 
 # connect/authenticate to SharePoint Online and get ClientContext object.. 
 $sCtx = New-Object Microsoft.SharePoint.Client.ClientContext($sUrl)
-$sCredentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($sAdmin, $sSecurePwd)
+if ($inputFile.SharePointCredentials.IsSiteSharePointOnline -eq $true) {
+	$sCredentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($sAdmin, $sSecurePwd)
+} else {
+	$sCredentials = New-Object System.Net.NetworkCredential($sAdmin, $sSecurePwd)
+}
 $sCtx.Credentials = $sCredentials
+
 
 if (!$sCtx.ServerObjectIsNull.Value) 
 { 
