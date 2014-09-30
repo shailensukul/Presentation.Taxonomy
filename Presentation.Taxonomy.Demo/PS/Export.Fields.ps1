@@ -19,7 +19,7 @@ $sPwd = $inputFile.SharePointCredentials.Password
 
 Write-Host $sUrl
 # 3) What Site Column Group do you want to synchronize?
-$sGroupName = $inputFile.SharePointCredentials.SiteGroup
+$sGroupName = $inputFile.SharePointCredentials.SiteColumnGroup
 
 ## Stop here
 $lcid = "1033"

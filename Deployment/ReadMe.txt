@@ -17,6 +17,11 @@ This will point the Managed Metadata columns to the correct termset
 ./DeploySolution.ps1
 This will deploy and activate the solution in your site collection
 
+
+4.1 In the generated XML for columns, for Field elements of type "TaxonomyFieldType", search for List={some-guid} and replace with List="Lists/TaxonomyHiddenList" 
+
+4.2 In the generated XML for columns, search for WebID={some-guid} and replace with WebId="~sitecollection"
+
 5. Activating the solution also actives all the features. 
 Initially, we do not require all the features activated.
 Navigate to Site Collection Features and deactivate these features (in this order):
