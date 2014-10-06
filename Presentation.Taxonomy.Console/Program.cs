@@ -14,6 +14,12 @@ namespace Presentation.Taxonomy.Console
         static string webUrl = string.Empty;
         static string userName = string.Empty;
         static SecureString password;
+        // Arguments
+        // 0 - Operation
+        // 1 - Web Url
+        // 2 - User Id
+        // 3 - Password
+        // 4 - Optional argument
         static void Main(string[] args)
         {
             try
@@ -24,7 +30,9 @@ namespace Presentation.Taxonomy.Console
                     return;
                 }
                 webUrl = args[1];
-                GetUserCredentials();
+                userName = args[2];
+                password = args[3].ToString().ToSecureString();
+                //GetUserCredentials();
 
                 switch (args[0])
                 {
@@ -38,7 +46,7 @@ namespace Presentation.Taxonomy.Console
                         break;
                     case "LISTS":
                         var listsSetup = new ListsSetup(() => GetAuthenticatedContext(webUrl, userName, password));
-                        listsSetup.Execute(Int32.Parse(args[2]));
+                        listsSetup.Execute(Int32.Parse(args[4]));
                         break;
                     default:
                         throw new ArgumentException("Not supported operation.");
@@ -88,13 +96,14 @@ namespace Presentation.Taxonomy.Console
         private static void Usage()
         {
             System.Console.WriteLine("Please provide the operation option and the main intranet site collection url.");
-            System.Console.WriteLine("Usage: Presentation.Taxonomy.Console.exe METADATA <site collection url>");
-            System.Console.WriteLine("Usage: Presentation.Taxonomy.Console.exe LISTS <site collection url> [ListLevel]");
+            System.Console.WriteLine("Usage: Presentation.Taxonomy.Console.exe METADATA <site collection url> <user id> <password>");
+            System.Console.WriteLine("Usage: Presentation.Taxonomy.Console.exe LISTS <site collection url> <user id> <password> [ListLevel]");
             System.Console.WriteLine("Where [ListLevel] = 1 for base lists, 2 for second level lists, 3 for third level lists and so on");
         }
 
         private static ClientContext GetAuthenticatedContext(string siteUrl, string userName, SecureString password)
         {
+            //System.Console.WriteLine(string.Format("Attempting to connect with {0} with user id {1}", siteUrl, userName));
             ClientContext ctx;
             if (String.IsNullOrEmpty(userName))
             {
