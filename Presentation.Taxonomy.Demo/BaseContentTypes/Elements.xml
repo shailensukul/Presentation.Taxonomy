@@ -7,7 +7,7 @@
   <ContentType ID='0x0100F92B529AD18F4D498737307175B60E37' Name='Staff' Group='Sukul.Demo' Description='' Overwrite='TRUE' Inherits='FALSE'>
     <FieldRefs>
       <FieldRef ID='{c042a256-787d-4a6f-8a8a-cf6ab767f12d}' Name='ContentType' Required='FALSE' Hidden='FALSE' />
-      <FieldRef ID='{fa564e0f-0c70-4ab9-b863-0177e6ddd247}' Name='Title' Required='FALSE' Hidden='TRUE' ShowInNewForm='TRUE' ShowInEditForm='TRUE' />
+      <FieldRef ID='{fa564e0f-0c70-4ab9-b863-0177e6ddd247}' Name='Title' Required='FALSE' Hidden='FALSE' ShowInNewForm='TRUE' ShowInEditForm='TRUE' />
       <FieldRef ID='{e1b2b669-2302-43ef-8e77-828f30fe5521}' Name='FirstName1' Required='TRUE' Hidden='FALSE' />
       <FieldRef ID='{3ac38149-6751-4f6c-b85e-09541a696fc7}' Name='LastName' Required='TRUE' Hidden='FALSE' />
       <FieldRef ID='{64a42df2-a554-48d1-a4bb-1e7781ca1769}' Name='EmailAddress' Required='FALSE' Hidden='FALSE' />
@@ -22,7 +22,7 @@
   <ContentType ID='0x0100E24CA8452451C1448327FBDBF49A2A1C' Name='Guardian' Group='Sukul.Demo' Description='' Overwrite='TRUE' Inherits='FALSE'>
     <FieldRefs>
       <FieldRef ID='{c042a256-787d-4a6f-8a8a-cf6ab767f12d}' Name='ContentType' Required='FALSE' Hidden='FALSE' />
-      <FieldRef ID='{fa564e0f-0c70-4ab9-b863-0177e6ddd247}' Name='Title' Required='FALSE' Hidden='TRUE' ShowInNewForm='TRUE' ShowInEditForm='TRUE' />
+      <FieldRef ID='{fa564e0f-0c70-4ab9-b863-0177e6ddd247}' Name='Title' Required='FALSE' Hidden='FALSE' ShowInNewForm='FALSE' ShowInEditForm='FALSE' />
       <FieldRef ID='{e1b2b669-2302-43ef-8e77-828f30fe5521}' Name='FirstName1' Required='TRUE' Hidden='FALSE' />
       <FieldRef ID='{3ac38149-6751-4f6c-b85e-09541a696fc7}' Name='LastName' Required='TRUE' Hidden='FALSE' />
       <FieldRef ID='{2112affc-de2f-4d1f-847c-8daa72ef97a8}' Name='ContactPhone' Required='FALSE' Hidden='FALSE' />

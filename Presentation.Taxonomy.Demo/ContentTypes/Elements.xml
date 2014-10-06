@@ -33,7 +33,7 @@
       <FieldRef ID='{3c9d245c-f5fa-415d-ab9d-d41f47f267b2}' Name='SukulFieldsRoom0' Required='FALSE' Hidden='TRUE' />
       <FieldRef ID='{f3b0adf9-c1a2-4b02-920d-943fba4b3611}' Name='TaxCatchAll' Required='FALSE' Hidden='TRUE' />
       <FieldRef ID='{8f6b6dd8-9357-4019-8172-966fcd502ed2}' Name='TaxCatchAllLabel' Required='FALSE' Hidden='TRUE' />
-      <FieldRef ID='{fa564e0f-0c70-4ab9-b863-0177e6ddd247}' Name='Title' Required='TRUE' Hidden='TRUE' ShowInNewForm='TRUE' ShowInEditForm='TRUE' />
+      <FieldRef ID='{fa564e0f-0c70-4ab9-b863-0177e6ddd247}' Name='Title' Required='FALSE' Hidden='TRUE' ShowInNewForm='TRUE' ShowInEditForm='TRUE' />
     </FieldRefs>
   </ContentType>
   
@@ -41,7 +41,7 @@
   <ContentType ID='0x01006551F70D7C0E3846A2CBD0B5A003181A' Name='Roster' Group='Sukul.Demo' Description='' Overwrite='TRUE' Inherits='FALSE'>
     <FieldRefs>
       <FieldRef ID='{c042a256-787d-4a6f-8a8a-cf6ab767f12d}' Name='ContentType' Required='FALSE' Hidden='FALSE' />
-      <FieldRef ID='{fa564e0f-0c70-4ab9-b863-0177e6ddd247}' Name='Title' Required='TRUE' Hidden='TRUE' ShowInNewForm='TRUE' ShowInEditForm='TRUE' />
+      <FieldRef ID='{fa564e0f-0c70-4ab9-b863-0177e6ddd247}' Name='Title' Required='FALSE' Hidden='TRUE' ShowInNewForm='TRUE' ShowInEditForm='TRUE' />
       <FieldRef ID='{ee39a06d-828c-40fa-9f8b-ad5d9924b2a9}' Name='Staff' Required='FALSE' Hidden='FALSE' />
       <FieldRef ID='{afaa7c42-39de-44c8-8d09-6abd5e8f6750}' Name='Start_x0020_DateTime' Required='FALSE' Hidden='FALSE' />
       <FieldRef ID='{c2155dd9-d5dc-49ab-8ada-2cd336936ab7}' Name='End_x0020_DateTime' Required='FALSE' Hidden='FALSE' />

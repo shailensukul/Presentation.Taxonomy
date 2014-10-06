@@ -10,6 +10,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deployment", "Deployment", "{3BFD474B-BBD8-41D7-96CE-1771FEAC41DB}"
 	ProjectSection(SolutionItems) = preProject
 		Deployment\DeploySolution.ps1 = Deployment\DeploySolution.ps1
+		Deployment\GetSSPID.ps1 = Deployment\GetSSPID.ps1
+		Deployment\manage-feature.ps1 = Deployment\manage-feature.ps1
 		Deployment\Microsoft.SharePoint.Client.dll = Deployment\Microsoft.SharePoint.Client.dll
 		Deployment\Microsoft.SharePoint.Client.Runtime.dll = Deployment\Microsoft.SharePoint.Client.Runtime.dll
 		Deployment\ReadMe.txt = Deployment\ReadMe.txt
