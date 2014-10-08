@@ -1,10 +1,6 @@
- $secureSiteCollectionUrl = "https://sharepointclouddesign.sharepoint.com"
- $login = "shailensukul@SharePointCloudDesign.com"
-$password = "f1bon@cci"
-$securePassword = convertto-securestring $password -asplaintext -force
-
-$consoleApp = Resolve-Path "Presentation.Taxonomy.Console.exe"
-
-cls
-Write-Host "Getting SSPID"
-& $consoleApp SSPID $secureSiteCollectionUrl $login $password 
+	[System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SharePoint")
+	[System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SharePoint.Taxonomy")
+	$spSite = new-object Microsoft.SharePoint.SPSite("https://sukulsharepoint.sharepoint.com/sites/SPSat")
+	$session = new-object Microsoft.SharePoint.Taxonomy.TaxonomySession($spSite)
+	$termStore = $session.TermStores[0]; 
+	Write-Host "SSPID: " $termStore.Id

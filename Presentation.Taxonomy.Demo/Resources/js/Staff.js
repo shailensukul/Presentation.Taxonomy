@@ -7,7 +7,7 @@ if (SUKUL.Reports.Staff == undefined) {
         var self = this;
 
         self.Execute = function () {
-            var clientContext = new SP.ClientContext("/sites/demo");
+            var clientContext = new SP.ClientContext("/");
             var list = clientContext.get_web().get_lists().getByTitle('Staff');
 
             var camlQuery = new SP.CamlQuery();

@@ -3,8 +3,13 @@
 # http://www.microsoft.com/en-us/download/details.aspx?id=35588
 #
 
-$secureSiteCollectionUrl = "https://sharepointclouddesign.sharepoint.com"
-$site = "https://sharepointclouddesign.sharepoint.com"
+# $secureSiteCollectionUrl = "https://sharepointclouddesign.sharepoint.com"
+# $site = "https://sharepointclouddesign.sharepoint.com"
+
+$secureSiteCollectionUrl = "https://sharepointclouddesign.sharepoint.com/search"
+$site = "https://sharepointclouddesign.sharepoint.com/search"
+
+
 $login = "shailensukul@SharePointCloudDesign.com"
 $password = ""
 $securePassword = convertto-securestring $password -asplaintext -force
@@ -13,7 +18,7 @@ $securePassword = convertto-securestring $password -asplaintext -force
 cls
 $executingScriptDirectory = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
 
-$consoleApp = Resolve-Path "Presentation.Taxonomy.Console.exe"
+$consoleApp = Resolve-PAth "Presentation.Taxonomy.Console.exe"
 
 Write-Host "Creating the taxonomy"
 & $consoleApp METADATA $site $login $password
