@@ -1,8 +1,8 @@
 ﻿<SharePointCredentials>
-  <Url>http://sukulgroupwestjapan.cloudapp.net/sites/brave</Url>
-  <UserID>sukul\shailensukul</UserID>
+  <Url>https://sharepointclouddesign.sharepoint.com</Url>
+  <UserID>shailensukul@sharepointclouddesign.com</UserID>
   <Password></Password>
-  <ContentTypeGroup>Brave Energy</ContentTypeGroup>
-  <SiteColumnGroup>Brave</SiteColumnGroup>
-  <IsSiteSharePointOnline>false</IsSiteSharePointOnline>
+  <ContentTypeGroup>Sukul.Demo</ContentTypeGroup>
+  <SiteColumnGroup>Sukul.Demo</SiteColumnGroup>
+  <IsSiteSharePointOnline>true</IsSiteSharePointOnline>
 </SharePointCredentials>
