@@ -167,6 +167,7 @@
     <Content Include="PS\Microsoft.SharePoint.Client.dll" />
     <Content Include="PS\Microsoft.SharePoint.Client.Runtime.dll" />
     <Content Include="PS\Microsoft.SharePoint.Client.Taxonomy.dll" />
+    <Content Include="ReadMe.txt" />
     <Content Include="Resources\css\jQueryUI\jquery-ui.min.css" />
     <Content Include="Resources\css\jQueryUI\jquery-ui.theme.css" />
     <Content Include="Resources\Elements.xml" />

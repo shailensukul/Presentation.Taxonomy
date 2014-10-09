@@ -1,15 +1,4 @@
-﻿#######################
-#
-# Migrate Site Columns by Custom Group Name
-#
-# "Elise", a series of scripts to migrate O365 SharePoint Online Assets across O365 instances
-#
-# Copyright 2014, John Wefler, Rightpoint Consulting, LLC.
-#
-#######################
-
-# Change the following to reflect your environments
-[xml]$inputFile = Get-Content Input.xml 
+﻿[xml]$inputFile = Get-Content Input.xml 
 
 
 # 1) Source Site

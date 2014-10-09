@@ -1,7 +1,7 @@
 ﻿<SharePointCredentials>
   <Url>https://sharepointclouddesign.sharepoint.com</Url>
   <UserID>shailensukul@sharepointclouddesign.com</UserID>
-  <Password></Password>
+  <Password>f1bon@cci</Password>
   <ContentTypeGroup>Sukul.Demo</ContentTypeGroup>
   <SiteColumnGroup>Sukul.Demo</SiteColumnGroup>
   <IsSiteSharePointOnline>true</IsSiteSharePointOnline>
