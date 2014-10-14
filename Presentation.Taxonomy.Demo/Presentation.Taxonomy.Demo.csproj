@@ -118,6 +118,7 @@
     <None Include="PS\Export.Lists.ps1" />
     <None Include="PS\Export.Taxonomy.ps1" />
     <None Include="PS\GetSspId.ps1" />
+    <None Include="PS\Import.Taxonomy.ps1" />
     <None Include="Resources\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{f35cf199-fddf-49ce-92e2-8683ed0b72cc}</SharePointProjectItemId>
     </None>
@@ -163,10 +164,12 @@
     <Content Include="Lists\Weather\Elements.xml" />
     <Content Include="Lists\Weather\Schema.xml" />
     <Content Include="Lists\Weather\WeatherInstance\Elements.xml" />
+    <Content Include="PS\Input.Destination.xml" />
     <Content Include="PS\Input.xml" />
     <Content Include="PS\Microsoft.SharePoint.Client.dll" />
     <Content Include="PS\Microsoft.SharePoint.Client.Runtime.dll" />
     <Content Include="PS\Microsoft.SharePoint.Client.Taxonomy.dll" />
+    <Content Include="PS\Taxonomy.xml" />
     <Content Include="ReadMe.txt" />
     <Content Include="Resources\css\jQueryUI\jquery-ui.min.css" />
     <Content Include="Resources\css\jQueryUI\jquery-ui.theme.css" />

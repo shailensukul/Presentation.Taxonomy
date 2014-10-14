@@ -11,8 +11,8 @@ Add-Type -Path "Microsoft.SharePoint.Client.Taxonomy.dll"
 
 Function Get-Terms ($term, $ctx, [string]$tabLevel) 
  {
-	Write-Host "`n<Term Id='$($term.Id)' Name='$($term.Name)' Lcid='$lcid'>" -ForegroundColor Cyan
-	Add-Content $global:xmlFilePath "`n$tabLevel<Term Id='$($term.Id)' Name='$($term.Name)' Lcid='$lcid'>"
+	Write-Host "<Term Id='$($term.Id)' Name='$($term.Name)' Lcid='$lcid'/>" -ForegroundColor Cyan
+	Add-Content $xmlFilePath "$tabLevel<Term Id='$($term.Id)' Name='$($term.Name)' Lcid='$lcid'>"
 
 	$ctx.Load($term.Terms)
 	$ctx.ExecuteQuery()
@@ -24,13 +24,13 @@ Function Get-Terms ($term, $ctx, [string]$tabLevel)
 			Get-Terms ($childTerm) ($ctx) ($tabLevel + "`t")
 		}
 	}
-	Add-Content $global:xmlFilePath "$tabLevel</Term>"
+	Add-Content $xmlFilePath "$tabLevel</Term>"
 }
 
 [xml]$inputFile = Get-Content Input.xml 
-[string] $global:xmlFilePath = "C:\Temp\Script-Taxonomy.xml"
+$executingScriptDirectory = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
+[string] $xmlFilePath = "$($executingScriptDirectory)\Taxonomy.xml"
 
-# Source Site
 $sUrl = $inputFile.SharePointCredentials.Url;
 $sAdmin = $inputFile.SharePointCredentials.UserID;
 $sPwd = $inputFile.SharePointCredentials.Password
@@ -82,10 +82,12 @@ if (!$sCtx.ServerObjectIsNull.Value)
                     $sCtx.ExecuteQuery()
 
 					#Create Export Files
-					New-Item $global:xmlFilePath -type file -force
-					Add-Content $global:xmlFilePath "<?xml version=`"1.0`" encoding=`"utf-8`"?>"
-					Add-Content $global:xmlFilePath "`n<Taxonomy Id='$($sTermStore.Id)' Name='$($sTermStore.Name)'>"
-					Add-Content $global:xmlFilePath "`n`t<Group Id='$($sTermGroup.Id)' Name='$($sTermGroup.Name)'>"
+					New-Item $xmlFilePath -type file -force
+					Add-Content $xmlFilePath "<?xml version=`"1.0`" encoding=`"utf-8`"?>"
+					Add-Content $xmlFilePath "<!--Generated on $(Get-Date -Format o)-->"
+					Add-Content $xmlFilePath "<!--Generated from $($sUrl)-->"
+					Add-Content $xmlFilePath "<TermStore Id='$($sTermStore.Id)' Name='$($sTermStore.Name)'>"
+					Add-Content $xmlFilePath "`t<Group Id='$($sTermGroup.Id)' Name='$($sTermGroup.Name)'>"
 
                     foreach($sTermSet in $sTermGroup.TermSets)
                     {
@@ -93,16 +95,16 @@ if (!$sCtx.ServerObjectIsNull.Value)
                         $sCtx.Load($sTermSet.Terms)
                         $sCtx.ExecuteQuery()
 
-						Add-Content $global:xmlFilePath "`n`t`t<TermSet Id='$($sTermSet.Id)' Name='$($sTermSet.Name)' Lcid='$lcid'>"
+						Add-Content $xmlFilePath "`t`t<TermSet Id='$($sTermSet.Id)' Name='$($sTermSet.Name)' Lcid='$lcid'>"
 
                         foreach($term in $sTermSet.Terms)
                         {
 							Get-Terms ($term) ($sCtx) ("`t`t`t")
                         }
-						Add-Content $global:xmlFilePath "`n`t`t</TermSet>"
+						Add-Content $xmlFilePath "`t`t</TermSet>"
 					}
-					Add-Content $global:xmlFilePath "`n`t</Group>"
-					Add-Content $global:xmlFilePath "`n</Taxonomy>"
+					Add-Content $xmlFilePath "`t</Group>"
+					Add-Content $xmlFilePath "</TermStore>"
 
                 }
             }
