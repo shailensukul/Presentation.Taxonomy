@@ -1,4 +1,4 @@
-﻿<SharePointCredentials>
+﻿<SharePointSettings>
   <Url>https://qhealthdashpoc.sharepoint.com</Url>
   <UserID>readify@qhealthdashpoc.onmicrosoft.com</UserID>
   <Password></Password>
@@ -6,4 +6,4 @@
   <SiteColumnGroup>Sukul.Demo</SiteColumnGroup>
   <TermStoreGroup>Sukul Terms</TermStoreGroup>
   <IsSiteSharePointOnline>true</IsSiteSharePointOnline>
-</SharePointCredentials>
+</SharePointSettings>

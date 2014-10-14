@@ -13,10 +13,10 @@
 
 
 # 1) Source Site
-$sUrl = $inputFile.SharePointCredentials.Url;
-$sAdmin = $inputFile.SharePointCredentials.UserID;
-$sPwd = $inputFile.SharePointCredentials.Password
-$contentTypeGroup = $inputFile.SharePointCredentials.ContentTypeGroup
+$sUrl = $inputFile.SharePointSettings.Url;
+$sAdmin = $inputFile.SharePointSettings.UserID;
+$sPwd = $inputFile.SharePointSettings.Password
+$contentTypeGroup = $inputFile.SharePointSettings.ContentTypeGroup
 
 $sSecurePwd = ConvertTo-SecureString $sPwd -AsPlainText -Force
 
@@ -34,7 +34,7 @@ Add-Content $xmlFilePath "<Elements xmlns=`"http://schemas.microsoft.com/sharepo
 
 # connect/authenticate to SharePoint Online and get ClientContext object.. 
 $sCtx = New-Object Microsoft.SharePoint.Client.ClientContext($sUrl)
-if ($inputFile.SharePointCredentials.IsSiteSharePointOnline -eq $true) {
+if ($inputFile.SharePointSettings.IsSiteSharePointOnline -eq $true) {
 	$sCredentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($sAdmin, $sSecurePwd)
 } else {
 	$sCredentials = New-Object System.Net.NetworkCredential($sAdmin, $sSecurePwd)

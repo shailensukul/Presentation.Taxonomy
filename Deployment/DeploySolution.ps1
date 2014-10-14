@@ -7,10 +7,10 @@ $executingScriptDirectory = Split-Path -Path $MyInvocation.MyCommand.Definition 
 
 [xml]$inputFile = Get-Content $executingScriptDirectory\Input.xml 
 
-$secureSiteCollectionUrl = $inputFile.SharePointCredentials.SiteCollectionUrl
-$site =  $inputFile.SharePointCredentials.SiteUrl
-$login = $inputFile.SharePointCredentials.UserID
-$password = $inputFile.SharePointCredentials.Password
+$secureSiteCollectionUrl = $inputFile.SharePointSettings.SiteCollectionUrl
+$site =  $inputFile.SharePointSettings.SiteUrl
+$login = $inputFile.SharePointSettings.UserID
+$password = $inputFile.SharePointSettings.Password
 $securePassword = convertto-securestring $password -asplaintext -force
 $consoleApp = Resolve-PAth "Presentation.Taxonomy.Console.exe"
 

@@ -1,4 +1,4 @@
-﻿<SharePointCredentials>
+﻿<SharePointSettings>
   <!--Site Collection where Site Columns, Content Types and List Schema will be deployed -->
   <SiteCollectionUrl>https://sharepointclouddesign.sharepoint.com</SiteCollectionUrl>
   <!--Site where list instances will be deployed -->
@@ -6,4 +6,4 @@
   <UserID>shailensukul@sharepointclouddesign.com</UserID>
   <Password></Password>
   <IsSiteSharePointOnline>true</IsSiteSharePointOnline>
-</SharePointCredentials>
+</SharePointSettings>

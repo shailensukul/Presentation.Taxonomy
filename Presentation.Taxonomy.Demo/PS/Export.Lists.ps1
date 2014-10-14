@@ -4,10 +4,10 @@
 
 
 # 1) Source Site
-$sUrl = $inputFile.SharePointCredentials.Url;
-$sAdmin = $inputFile.SharePointCredentials.UserID;
-$sPwd = $inputFile.SharePointCredentials.Password
-$contentTypeGroup = $inputFile.SharePointCredentials.ContentTypeGroup
+$sUrl = $inputFile.SharePointSettings.Url;
+$sAdmin = $inputFile.SharePointSettings.UserID;
+$sPwd = $inputFile.SharePointSettings.Password
+$contentTypeGroup = $inputFile.SharePointSettings.ContentTypeGroup
 
 Write-Host $sUrl
 # 3) What Site Column Group do you want to synchronize?

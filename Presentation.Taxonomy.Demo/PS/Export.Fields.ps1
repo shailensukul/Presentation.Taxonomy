@@ -1,16 +1,20 @@
-﻿[xml]$inputFile = Get-Content Input.xml 
+﻿# This script allows Site Columns belonging to a particular Group to be exported
+# Author: Shailen Sukul
+# http://shailensukul.com
+# INPUT FILE: Input.xml
 
+[xml]$inputFile = Get-Content Input.xml 
 
 # 1) Source Site
-$sUrl = $inputFile.SharePointCredentials.Url;
-$sAdmin = $inputFile.SharePointCredentials.UserID;
-$sPwd = $inputFile.SharePointCredentials.Password
+$sUrl = $inputFile.SharePointSettings.Url;
+$sAdmin = $inputFile.SharePointSettings.UserID;
+$sPwd = $inputFile.SharePointSettings.Password
 
 Write-Host $sUrl
-# 3) What Site Column Group do you want to synchronize?
-$sGroupName = $inputFile.SharePointCredentials.SiteColumnGroup
+# Which Site Column Group do you want to synchronize?
+$sGroupName = $inputFile.SharePointSettings.SiteColumnGroup
 
-## Stop here
+## Set locale here
 $lcid = "1033"
 
 $sSecurePwd = ConvertTo-SecureString $sPwd -AsPlainText -Force
@@ -29,7 +33,7 @@ Add-Content $xmlFilePath "`n<Fields>"
 
 # connect/authenticate to SharePoint Online and get ClientContext object.. 
 $sCtx = New-Object Microsoft.SharePoint.Client.ClientContext($sUrl)
-if ($inputFile.SharePointCredentials.IsSiteSharePointOnline -eq $true) {
+if ($inputFile.SharePointSettings.IsSiteSharePointOnline -eq $true) {
 	$sCredentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($sAdmin, $sSecurePwd)
 } else {
 	$sCredentials = New-Object System.Net.NetworkCredential($sAdmin, $sSecurePwd)

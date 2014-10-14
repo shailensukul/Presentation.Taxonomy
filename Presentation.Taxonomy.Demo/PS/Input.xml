@@ -1,4 +1,4 @@
-﻿<SharePointCredentials>
+﻿<SharePointSettings>
   <Url>https://sharepointclouddesign.sharepoint.com</Url>
   <UserID>shailensukul@sharepointclouddesign.com</UserID>
   <Password>f1bon@cci</Password>
@@ -6,4 +6,4 @@
   <SiteColumnGroup>Sukul.Demo</SiteColumnGroup>
   <TermStoreGroup>Sukul Terms</TermStoreGroup>
   <IsSiteSharePointOnline>true</IsSiteSharePointOnline>
-</SharePointCredentials>
+</SharePointSettings>

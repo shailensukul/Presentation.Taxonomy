@@ -1,8 +1,9 @@
 ﻿#
-# This script allows the Term store to be created from an XML file
+# This script allows the Term store to be created from an XML file created via Export.Taxonomy.ps1
 # Author: Shailen Sukul
 # http://shailensukul.com
-# This script works off an input file called Taxonomy.xml
+# INPUT FILE: Taxonomy.xml
+# INPUT FILE: Input.Destination.xml
 
 # these aren't required for the script to run, but help to develop
 Add-Type -Path "Microsoft.SharePoint.Client.dll"
@@ -32,9 +33,9 @@ if (Test-Path $xmlFilePath) {
 	[xml]$taxFile = Get-Content $xmlFilePath
 	[xml]$inputFile = Get-Content Input.Destination.xml 
 
-	$url = $inputFile.SharePointCredentials.Url;
-	$admin = $inputFile.SharePointCredentials.UserID;
-	$pwd = $inputFile.SharePointCredentials.Password
+	$url = $inputFile.SharePointSettings.Url;
+	$admin = $inputFile.SharePointSettings.UserID;
+	$pwd = $inputFile.SharePointSettings.Password
 	$securePwd = ConvertTo-SecureString $pwd -AsPlainText -Force
 
 	#Bind to MMS
@@ -66,20 +67,19 @@ if (Test-Path $xmlFilePath) {
 		{
 			#Create Term Sets
 			Write-Host Creating TermSet $Term.Name  -ForegroundColor Cyan
-			$NewTermSet = $NewGroup.CreateTermSet($TermSet.Name, $TermSet.Id, $lcid)
+			$NewTermSet = $NewGroup.CreateTermSet($TermSet.Name, $TermSet.Id, $TermSet.Lcid)
 			$Context.Load($NewTermSet)
 			$Context.ExecuteQuery()
 			Foreach ($Term in $TermSet.Term)
 			{
 				#Create Terms
 				Write-Host Creating Term $Term.Name  -ForegroundColor Yellow
-				$NewTerm = $NewTermSet.CreateTerm($Term.Name, $lcid, $Term.Id)
+				$NewTerm = $NewTermSet.CreateTerm($Term.Name, $Term.Lcid, $Term.Id)
 				$Context.Load($NewTerm)
 				$Context.ExecuteQuery()
 			}
 		}
 	}
-
 } else {
 	Write-Host Please provide an input file called Taxonomy.xml -ForegroundColor Red
 }

@@ -3,6 +3,7 @@
 # Author: Shailen Sukul
 # http://shailensukul.com
 # This script works off an input file called Input.xml
+# INPUT FILE: Input.xml
 
 # these aren't required for the script to run, but help to develop
 Add-Type -Path "Microsoft.SharePoint.Client.dll"
@@ -31,75 +32,75 @@ Function Get-Terms ($term, $ctx, [string]$tabLevel)
 $executingScriptDirectory = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
 [string] $xmlFilePath = "$($executingScriptDirectory)\Taxonomy.xml"
 
-$sUrl = $inputFile.SharePointCredentials.Url;
-$sAdmin = $inputFile.SharePointCredentials.UserID;
-$sPwd = $inputFile.SharePointCredentials.Password
-$sSecurePwd = ConvertTo-SecureString $sPwd -AsPlainText -Force
+$Url = $inputFile.SharePointSettings.Url;
+$User = $inputFile.SharePointSettings.UserID;
+$Pwd = $inputFile.SharePointSettings.Password
+$SecurePwd = ConvertTo-SecureString $Pwd -AsPlainText -Force
 
 # connect/authenticate to SharePoint Online and get ClientContext object.. 
-[Microsoft.SharePoint.Client.ClientContext] $sCtx = New-Object Microsoft.SharePoint.Client.ClientContext($sUrl)
-$sCredentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($sAdmin, $sSecurePwd)
-$sCtx.Credentials = $sCredentials
+[Microsoft.SharePoint.Client.ClientContext] $Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($Url)
+$Credentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($User, $SecurePwd)
+$Ctx.Credentials = $Credentials
 
 # What Term Group do you want to synchronize?
-$sTermGroupName = $inputFile.SharePointCredentials.TermStoreGroup 
+$TermGroupName = $inputFile.SharePointSettings.TermStoreGroup 
 
 ## Change locale here
 $lcid = "1033"
 
-if (!$sCtx.ServerObjectIsNull.Value) 
+if (!$Ctx.ServerObjectIsNull.Value) 
 { 
 	cls
-    Write-Host "Connected to the SOURCE SharePoint Online site: " $sCtx.Url "" -ForegroundColor Green
+    Write-Host "Connected to the SOURCE SharePoint Online site: " $Ctx.Url "" -ForegroundColor Green
     
-    $sTaxonomySession = [Microsoft.SharePoint.Client.Taxonomy.TaxonomySession]::GetTaxonomySession($sCtx)
+    $sTaxonomySession = [Microsoft.SharePoint.Client.Taxonomy.TaxonomySession]::GetTaxonomySession($Ctx)
     $sTaxonomySession.UpdateCache()
-    $sCtx.Load($sTaxonomySession)
-    $sCtx.ExecuteQuery()
+    $Ctx.Load($sTaxonomySession)
+    $Ctx.ExecuteQuery()
 
     if (!$sTaxonomySession.ServerObjectIsNull)
     {
         Write-Host "Source Taxonomy session initiated: " $sTaxonomySession.Path.Identity "" -ForegroundColor Green
 
-        $sTermStore = $sTaxonomySession.GetDefaultSiteCollectionTermStore()
-        $sCtx.Load($sTermStore)
-        $sCtx.ExecuteQuery()
+        $TermStore = $sTaxonomySession.GetDefaultSiteCollectionTermStore()
+        $Ctx.Load($TermStore)
+        $Ctx.ExecuteQuery()
 
-        if ($sTermStore.IsOnline) 
+        if ($TermStore.IsOnline) 
         {
-            Write-Host "...Default Term Store connected:" $sTermStore.Id "" -ForegroundColor Green
-            # $termStoreId will be the SspId in the taxonomy column configs
+			# Term store id is the SSPID
+            Write-Host "...Default Term Store connected:" $TermStore.Id "" -ForegroundColor Green
             
-            $sCtx.Load($sTermStore.Groups)
-            $sCtx.ExecuteQuery()
+            $Ctx.Load($TermStore.Groups)
+            $Ctx.ExecuteQuery()
 
-            foreach ($sTermGroup in $sTermStore.Groups)
+            foreach ($TermGroup in $TermStore.Groups)
             {
-                if ($sTermGroup.Name -eq $sTermGroupName)
+                if ($TermGroup.Name -eq $TermGroupName)
                 {
-                    Write-Host ".....Term Group loaded: " $sTermGroup.Name "-" $sTermGroup.Id "" -ForegroundColor Cyan
-                    $sCtx.Load($sTermGroup.TermSets)
-                    $sCtx.ExecuteQuery()
+                    Write-Host "Term Group loaded: " $TermGroup.Name "-" $TermGroup.Id "" -ForegroundColor Cyan
+                    $Ctx.Load($TermGroup.TermSets)
+                    $Ctx.ExecuteQuery()
 
 					#Create Export Files
 					New-Item $xmlFilePath -type file -force
 					Add-Content $xmlFilePath "<?xml version=`"1.0`" encoding=`"utf-8`"?>"
 					Add-Content $xmlFilePath "<!--Generated on $(Get-Date -Format o)-->"
-					Add-Content $xmlFilePath "<!--Generated from $($sUrl)-->"
-					Add-Content $xmlFilePath "<TermStore Id='$($sTermStore.Id)' Name='$($sTermStore.Name)'>"
-					Add-Content $xmlFilePath "`t<Group Id='$($sTermGroup.Id)' Name='$($sTermGroup.Name)'>"
+					Add-Content $xmlFilePath "<!--Generated from $($Url)-->"
+					Add-Content $xmlFilePath "<TermStore Id='$($TermStore.Id)' Name='$($TermStore.Name)'>"
+					Add-Content $xmlFilePath "`t<Group Id='$($TermGroup.Id)' Name='$($TermGroup.Name)'>"
 
-                    foreach($sTermSet in $sTermGroup.TermSets)
+                    foreach($TermSet in $TermGroup.TermSets)
                     {
-                        Write-Host ".......Term Set found: " $sTermSet.Name "-" $sTermSet.Id "" -ForegroundColor Cyan
-                        $sCtx.Load($sTermSet.Terms)
-                        $sCtx.ExecuteQuery()
+                        Write-Host ".......Term Set found: " $TermSet.Name "-" $TermSet.Id "" -ForegroundColor Cyan
+                        $Ctx.Load($TermSet.Terms)
+                        $Ctx.ExecuteQuery()
 
-						Add-Content $xmlFilePath "`t`t<TermSet Id='$($sTermSet.Id)' Name='$($sTermSet.Name)' Lcid='$lcid'>"
+						Add-Content $xmlFilePath "`t`t<TermSet Id='$($TermSet.Id)' Name='$($TermSet.Name)' Lcid='$lcid'>"
 
-                        foreach($term in $sTermSet.Terms)
+                        foreach($term in $TermSet.Terms)
                         {
-							Get-Terms ($term) ($sCtx) ("`t`t`t")
+							Get-Terms ($term) ($Ctx) ("`t`t`t")
                         }
 						Add-Content $xmlFilePath "`t`t</TermSet>"
 					}
