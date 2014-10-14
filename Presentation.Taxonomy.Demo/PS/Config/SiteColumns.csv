@@ -1,2 +1,0 @@
-SiteCollectionURL,FieldType,Name,Description,DisplayName,StaticName,Group,Hidden,Required,Sealed,ShowInDisplayForm,ShowInEditForm,ShowInListSettings,ShowInNewForm
-http://intranet,Text,Field1,"Field 1 Desc",Field1,Field1,Sukul,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE

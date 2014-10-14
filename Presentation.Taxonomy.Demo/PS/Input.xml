@@ -4,5 +4,6 @@
   <Password>f1bon@cci</Password>
   <ContentTypeGroup>Sukul.Demo</ContentTypeGroup>
   <SiteColumnGroup>Sukul.Demo</SiteColumnGroup>
+  <TermStoreGroup>Sukul Terms</TermStoreGroup>
   <IsSiteSharePointOnline>true</IsSiteSharePointOnline>
 </SharePointCredentials>
