@@ -6,4 +6,5 @@
   <SiteColumnGroup>Sukul.Demo</SiteColumnGroup>
   <TermStoreGroup>Sukul Terms</TermStoreGroup>
   <IsSiteSharePointOnline>true</IsSiteSharePointOnline>
+  <ScriptExportFolder>d:\temp</ScriptExportFolder>
 </SharePointSettings>

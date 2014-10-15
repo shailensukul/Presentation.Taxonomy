@@ -1,16 +1,10 @@
-﻿#######################
-#
-# Migrate Site Columns by Custom Group Name
-#
-# "Elise", a series of scripts to migrate O365 SharePoint Online Assets across O365 instances
-#
-# Copyright 2014, John Wefler, Rightpoint Consulting, LLC.
-#
-#######################
+﻿# This script allows Site Content Types belonging to a particular Group to be exported
+# Author: Shailen Sukul
+# http://shailensukul.com
+# INPUT FILE: Input.xml
 
 # Change the following to reflect your environments
 [xml]$inputFile = Get-Content Input.xml 
-
 
 # 1) Source Site
 $sUrl = $inputFile.SharePointSettings.Url;
@@ -25,7 +19,7 @@ Add-Type -Path "Microsoft.SharePoint.Client.dll"
 Add-Type -Path "Microsoft.SharePoint.Client.Runtime.dll"
 Add-Type -Path "Microsoft.SharePoint.Client.Taxonomy.dll"
 
-$xmlFilePath = "c:\temp\Script-ContentTypes.xml"
+$xmlFilePath = "$($inputFile.SharePointSettings.ScriptExportFolder)\Exported.Site.Coontent.Types.xml"
 #Create Export Files
 New-Item $xmlFilePath -type file -force
 #Export Site Columns to XML file
