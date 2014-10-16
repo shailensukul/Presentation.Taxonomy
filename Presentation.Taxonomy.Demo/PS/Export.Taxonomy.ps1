@@ -30,7 +30,7 @@ Function Get-Terms ($term, $ctx, [string]$tabLevel)
 
 [xml]$inputFile = Get-Content Input.xml 
 $executingScriptDirectory = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
-[string] $xmlFilePath = "$($executingScriptDirectory)\Taxonomy.xml"
+[string] $xmlFilePath = "$($inputFile.SharePointSettings.ScriptExportFolder)\Taxonomy.xml"
 
 $Url = $inputFile.SharePointSettings.Url;
 $User = $inputFile.SharePointSettings.UserID;
