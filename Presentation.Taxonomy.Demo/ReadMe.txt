@@ -15,3 +15,5 @@ This will deploy and activate the solution in your site collection
 
 4.2 In the generated XML for columns, search for WebID={some-guid} and replace with WebId="~sitecollection"
 
+4.3. Search for Type="Lookup" and replace List=GUID with with List="Lists/LookupListName" 
+ 

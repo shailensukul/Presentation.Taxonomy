@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Generated on 2014-10-14T14:47:40.6629563+11:00-->
+<!--Generated from https://sharepointclouddesign.sharepoint.com-->
+<TermStore Id='61bd91e5-d358-4719-927c-3d2074d0561f' Name='Taxonomy_Kb7pnbYp3/gcmVVVxuMQng=='>
+	<Group Id='1e6297eb-9782-4690-862e-9608b190de8a' Name='Sukul Terms'>
+		<TermSet Id='bfe6d355-4566-491a-8c57-fde0233e56a2' Name='GuardianType' Lcid='1033'>
+			<Term Id='2012199e-c206-410d-8c3f-45259a8065db' Name='Aunt' Lcid='1033'>
+				<Term Id='0a4c4151-43ad-4fac-a606-c553625083cd' Name='Fathers Side' Lcid='1033'>
+				</Term>
+				<Term Id='a4afb94b-00a7-484d-86aa-eea1c4431c71' Name='Mothers Side' Lcid='1033'>
+				</Term>
+			</Term>
+			<Term Id='3675028f-954e-4edf-a0d5-2281e62683ba' Name='Father' Lcid='1033'>
+			</Term>
+			<Term Id='b33535b0-d1f1-421e-935b-01e714fe16db' Name='Grandfather' Lcid='1033'>
+			</Term>
+			<Term Id='dc96db7d-f914-43af-ae6d-22873d31276e' Name='Grandmother' Lcid='1033'>
+			</Term>
+			<Term Id='fab1ed28-b80d-4f6b-9f00-b39b9de25d4d' Name='Mother' Lcid='1033'>
+			</Term>
+			<Term Id='87e10a10-eee6-47b0-9ef6-500346295552' Name='Other' Lcid='1033'>
+			</Term>
+			<Term Id='31167e00-50ed-4327-b842-5c9ff222b7c6' Name='Uncle' Lcid='1033'>
+			</Term>
+		</TermSet>
+		<TermSet Id='939e25a2-ca80-4a4d-895c-ffa2790fd23d' Name='PottyType' Lcid='1033'>
+			<Term Id='33b94b00-23e0-4fa8-aeb0-b101d36e1800' Name='Both' Lcid='1033'>
+			</Term>
+			<Term Id='807313ac-788f-47c6-91e4-32ae95e4ed6d' Name='Poo' Lcid='1033'>
+			</Term>
+			<Term Id='32768b71-18b0-43d1-b1da-4759e852a3f4' Name='Wee' Lcid='1033'>
+			</Term>
+		</TermSet>
+		<TermSet Id='f6d8e1b6-78c7-4f85-9773-3ba601ad0196' Name='Rooms' Lcid='1033'>
+			<Term Id='56ce1a58-74fa-4490-996b-bf94af820553' Name='Infant' Lcid='1033'>
+			</Term>
+			<Term Id='6eaac0b0-ad09-41b8-8888-2977fbc6342a' Name='Kindergarden' Lcid='1033'>
+			</Term>
+			<Term Id='4e0ee5be-4f00-4b55-8b0b-1388819aaf2b' Name='Pre Kinder' Lcid='1033'>
+			</Term>
+			<Term Id='17ed26f0-b17b-4fef-a374-7d8c80d4bbbc' Name='Toddler 1' Lcid='1033'>
+			</Term>
+			<Term Id='6e48a9cc-42b3-4611-85c7-31cbbc737829' Name='Toddler 2' Lcid='1033'>
+			</Term>
+		</TermSet>
+	</Group>
+</TermStore>
