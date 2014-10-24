@@ -54,8 +54,8 @@ namespace Presentation.Taxonomy.Console
             }
             catch(Exception ex)
             {
-                System.Console.Clear();
-                System.Console.WriteLine(ex.Message);
+                //System.Console.Clear();
+                System.Console.WriteLine(ex.ToString());
                 Usage();  
             }
         }

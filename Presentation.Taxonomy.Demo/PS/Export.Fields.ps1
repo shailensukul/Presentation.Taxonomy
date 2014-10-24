@@ -59,9 +59,7 @@ if (!$sCtx.ServerObjectIsNull.Value)
             $sourceID = $sCol.TextField
             #convert to XML object for future manipulation of nodes
             [xml]$sColXML = $sCol.SchemaXml
-
-			Add-Content $xmlFilePath $sCol.SchemaXml
-
+			
 			# Make a second pass to get the Note field
 			if ($sourceID -ne "") {
 				$sCols | ForEach-Object {
@@ -71,6 +69,8 @@ if (!$sCtx.ServerObjectIsNull.Value)
 					}
 				}
 			}
+			Add-Content $xmlFilePath $sCol.SchemaXml
+
         }
     }
 }

@@ -1,5 +1,12 @@
 ABOUT
 -----
+
+# Before running this, install the PowerShell module for SharePoint Online here 
+# http://www.microsoft.com/en-us/download/details.aspx?id=35588
+# Also, you MUST PowerShell as an Administrator
+# Also need to set execution policy:
+# Set-ExecutionPolicy Unrestricted
+
 This sample code is companion to the the presentation titled "SharePoint Taxonomy in Practice" presented at SharePoint Saturday 2014 and in more depth at TechEd 2014.
 Follow the steps below to provision the taxonomy, columns, content types and lists in your own Office 365 SharePoint site collection.
 
