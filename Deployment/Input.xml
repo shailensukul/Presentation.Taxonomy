@@ -4,6 +4,6 @@
   <!--Site where list instances will be deployed -->
   <SiteUrl>https://techedozdemo.sharepoint.com</SiteUrl>
   <UserID>shailensukul@TechEdOzDemo.onmicrosoft.com</UserID>
-  <Password>f1bon@cci</Password>
+  <Password></Password>
   <IsSiteSharePointOnline>true</IsSiteSharePointOnline>
 </SharePointSettings>
