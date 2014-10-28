@@ -19,7 +19,6 @@ $consoleApp = Resolve-PAth "Presentation.Taxonomy.Console.exe"
 [Reflection.Assembly]::LoadFile("$executingScriptDirectory\Microsoft.SharePoint.Client.Runtime.dll")
 [Reflection.Assembly]::LoadFile("$executingScriptDirectory\SharePointOnline.Helper.dll")
 
-cls
 Write-Host "Deploying to [$secureSiteCollectionUrl] with user id [$login]"
 Write-Host "Deploying to the Term Store ...."
 
@@ -41,7 +40,7 @@ $ctx.ExecuteQuery()
 Write-Host Authenticate for web usage
 $cookies = [SharePointOnline.Helper.Authenticator]::GetAuthenticatedCookies($secureSiteCollectionUrl, $login, $password);
 
-Write-Host "Deactivating existing solution .. press enter to continue"
+Write-Host "Deactivating existing solution .. "
 try {
 [SharePointOnline.Helper.SandboxSolutions]::DeactivateSolution($secureSiteCollectionUrl, $cookies, "Presentation.Taxonomy.Demo.wsp");
 }
