@@ -22,13 +22,13 @@ $consoleApp = Resolve-PAth "Presentation.Taxonomy.Console.exe"
 Write-Host "Deploying to [$secureSiteCollectionUrl] with user id [$login]"
 Write-Host "Deploying to the Term Store ...."
 
-try {
-& $consoleApp METADATA $secureSiteCollectionUrl $login $password
-	Write-Host "Finished deploying to the Term Store"
-}
-catch {
-	Write-Host "Error in deploying to  Term Store"
-}
+#try {
+#& $consoleApp METADATA $secureSiteCollectionUrl $login $password
+#	Write-Host "Finished deploying to the Term Store"
+#}
+#catch {
+#	Write-Host "Error in deploying to  Term Store"
+#}
 
 # Tests the authentication for client object model
 $ctx = [SharePointOnline.Helper.Authenticator]::GetClientContext($secureSiteCollectionUrl, $login, $password);

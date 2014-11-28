@@ -1,9 +1,9 @@
 ﻿<SharePointSettings>
   <!--Site Collection where Site Columns, Content Types and List Schema will be deployed -->
-  <SiteCollectionUrl>https://techedozdemo.sharepoint.com</SiteCollectionUrl>
+  <SiteCollectionUrl></SiteCollectionUrl>
   <!--Site where list instances will be deployed -->
-  <SiteUrl>https://techedozdemo.sharepoint.com</SiteUrl>
-  <UserID>shailensukul@TechEdOzDemo.onmicrosoft.com</UserID>
+  <SiteUrl></SiteUrl>
+  <UserID></UserID>
   <Password></Password>
   <IsSiteSharePointOnline>true</IsSiteSharePointOnline>
 </SharePointSettings>

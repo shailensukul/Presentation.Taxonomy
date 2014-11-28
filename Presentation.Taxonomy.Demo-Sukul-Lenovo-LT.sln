@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation.Taxonomy.Demo", "Presentation.Taxonomy.Demo\Presentation.Taxonomy.Demo.csproj", "{2A373C50-747E-4BB0-9928-13857E1D3BD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation.Taxonomy.Console", "Presentation.Taxonomy.Console\Presentation.Taxonomy.Console.csproj", "{AABCA900-5695-40CC-88B9-AD74858B52BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deployment", "Deployment", "{3BFD474B-BBD8-41D7-96CE-1771FEAC41DB}"
+	ProjectSection(SolutionItems) = preProject
+		Deployment\DeploySolution.ps1 = Deployment\DeploySolution.ps1
+		Deployment\GetSSPID.ps1 = Deployment\GetSSPID.ps1
+		Deployment\Input.xml = Deployment\Input.xml
+		Deployment\manage-feature.ps1 = Deployment\manage-feature.ps1
+		Deployment\Microsoft.SharePoint.Client.dll = Deployment\Microsoft.SharePoint.Client.dll
+		Deployment\Microsoft.SharePoint.Client.Runtime.dll = Deployment\Microsoft.SharePoint.Client.Runtime.dll
+		Deployment\Microsoft.SharePoint.Client.Taxonomy.dll = Deployment\Microsoft.SharePoint.Client.Taxonomy.dll
+		Deployment\Presentation.Taxonomy.Console.exe = Deployment\Presentation.Taxonomy.Console.exe
+		Deployment\Presentation.Taxonomy.Demo.wsp = Deployment\Presentation.Taxonomy.Demo.wsp
+		Deployment\ReadMe.txt = Deployment\ReadMe.txt
+		Deployment\SharePointOnline.Helper.dll = Deployment\SharePointOnline.Helper.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A373C50-747E-4BB0-9928-13857E1D3BD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A373C50-747E-4BB0-9928-13857E1D3BD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A373C50-747E-4BB0-9928-13857E1D3BD5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2A373C50-747E-4BB0-9928-13857E1D3BD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A373C50-747E-4BB0-9928-13857E1D3BD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A373C50-747E-4BB0-9928-13857E1D3BD5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AABCA900-5695-40CC-88B9-AD74858B52BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AABCA900-5695-40CC-88B9-AD74858B52BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AABCA900-5695-40CC-88B9-AD74858B52BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AABCA900-5695-40CC-88B9-AD74858B52BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -14,6 +14,7 @@ This will deploy and activate the solution in your site collection
 4.1 In the generated XML for columns, for Field elements of type "TaxonomyFieldType", search for List={some-guid} and replace with List="Lists/TaxonomyHiddenList" 
 
 4.2 In the generated XML for columns, search for WebID={some-guid} and replace with WebId="~sitecollection"
+4.2 In the generated XML for columns, search for SourceID={some-guid} and replace with SourceID="~sitecollection"
 
 4.3. Search for Type="Lookup" and replace List=GUID with with List="Lists/LookupListName" 
- 
+4.4 Remove the Version attribute from the Field schema. See http://johnliu.net/blog/2012/8/22/sharepoint-the-object-has-been-updated-by-another-user-since.html

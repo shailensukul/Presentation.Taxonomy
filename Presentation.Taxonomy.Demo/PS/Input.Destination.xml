@@ -1,9 +1,9 @@
 ﻿<SharePointSettings>
-  <Url>https://qhealthdashpoc.sharepoint.com</Url>
-  <UserID>readify@qhealthdashpoc.onmicrosoft.com</UserID>
-  <Password></Password>
+  <Url>https://techedozdemo.sharepoint.com/sites/TechEdSydWorkshop</Url>
+  <UserID>shailensukul@TechEdOzDemo.onmicrosoft.com</UserID>
+  <Password>p@ssw0rd</Password>
   <ContentTypeGroup>Sukul.Demo</ContentTypeGroup>
   <SiteColumnGroup>Sukul.Demo</SiteColumnGroup>
-  <TermStoreGroup>Sukul Terms</TermStoreGroup>
+  <TermStoreGroup>TechEdDemo</TermStoreGroup>
   <IsSiteSharePointOnline>true</IsSiteSharePointOnline>
 </SharePointSettings>

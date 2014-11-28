@@ -7,19 +7,27 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation.Taxonomy.Demo"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation.Taxonomy.Console", "Presentation.Taxonomy.Console\Presentation.Taxonomy.Console.csproj", "{AABCA900-5695-40CC-88B9-AD74858B52BF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deployment", "Deployment", "{3BFD474B-BBD8-41D7-96CE-1771FEAC41DB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PowerShell", "PowerShell", "{17F9C149-2BFD-4250-9570-FB69A9282815}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deployment", "Deployment", "{889AC0A4-CE87-4E35-AE71-1B5EB4309ACA}"
 	ProjectSection(SolutionItems) = preProject
-		Deployment\DeploySolution.ps1 = Deployment\DeploySolution.ps1
-		Deployment\GetSSPID.ps1 = Deployment\GetSSPID.ps1
-		Deployment\Input.xml = Deployment\Input.xml
-		Deployment\manage-feature.ps1 = Deployment\manage-feature.ps1
-		Deployment\Microsoft.SharePoint.Client.dll = Deployment\Microsoft.SharePoint.Client.dll
-		Deployment\Microsoft.SharePoint.Client.Runtime.dll = Deployment\Microsoft.SharePoint.Client.Runtime.dll
-		Deployment\Microsoft.SharePoint.Client.Taxonomy.dll = Deployment\Microsoft.SharePoint.Client.Taxonomy.dll
-		Deployment\Presentation.Taxonomy.Console.exe = Deployment\Presentation.Taxonomy.Console.exe
-		Deployment\Presentation.Taxonomy.Demo.wsp = Deployment\Presentation.Taxonomy.Demo.wsp
-		Deployment\ReadMe.txt = Deployment\ReadMe.txt
-		Deployment\SharePointOnline.Helper.dll = Deployment\SharePointOnline.Helper.dll
+		PowerShell\Deployment\Import.Columns.ps1 = PowerShell\Deployment\Import.Columns.ps1
+		PowerShell\Deployment\Import.Content.Types.ps1 = PowerShell\Deployment\Import.Content.Types.ps1
+		Import.Lists.ps1 = Import.Lists.ps1
+		PowerShell\Deployment\Import.Lists.ps1 = PowerShell\Deployment\Import.Lists.ps1
+		PowerShell\Deployment\Import.Solution.ps1 = PowerShell\Deployment\Import.Solution.ps1
+		PowerShell\Deployment\Import.Taxonomy.ps1 = PowerShell\Deployment\Import.Taxonomy.ps1
+		PowerShell\Deployment\Input.xml = PowerShell\Deployment\Input.xml
+		PowerShell\Deployment\Manage.Feature.ps1 = PowerShell\Deployment\Manage.Feature.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reverse.Engineer", "Reverse.Engineer", "{4F23F11C-D3F8-4292-9A1F-0BD6B17F4C86}"
+	ProjectSection(SolutionItems) = preProject
+		PowerShell\Reverse.Engineer\Export.Columns.ps1 = PowerShell\Reverse.Engineer\Export.Columns.ps1
+		PowerShell\Reverse.Engineer\Export.Content.Types.ps1 = PowerShell\Reverse.Engineer\Export.Content.Types.ps1
+		PowerShell\Reverse.Engineer\Export.Lists.ps1 = PowerShell\Reverse.Engineer\Export.Lists.ps1
+		PowerShell\Reverse.Engineer\Export.Taxonomy.ps1 = PowerShell\Reverse.Engineer\Export.Taxonomy.ps1
+		PowerShell\Reverse.Engineer\Input.xml = PowerShell\Reverse.Engineer\Input.xml
 	EndProjectSection
 EndProject
 Global
@@ -41,5 +49,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{889AC0A4-CE87-4E35-AE71-1B5EB4309ACA} = {17F9C149-2BFD-4250-9570-FB69A9282815}
+		{4F23F11C-D3F8-4292-9A1F-0BD6B17F4C86} = {17F9C149-2BFD-4250-9570-FB69A9282815}
 	EndGlobalSection
 EndGlobal

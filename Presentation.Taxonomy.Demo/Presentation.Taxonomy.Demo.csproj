@@ -114,9 +114,11 @@
     <None Include="PS\01 CreateSiteColumns.ps1" />
     <None Include="PS\Export-Import-SharePoint-List.ps1" />
     <None Include="PS\Export.Content.Types.ps1" />
+    <None Include="PS\Export.Fields.Post.Fix.ps1" />
     <None Include="PS\Export.Fields.ps1" />
     <None Include="PS\Export.Lists.ps1" />
     <None Include="PS\Export.Taxonomy.ps1" />
+    <None Include="PS\GetSSPID.ps1" />
     <None Include="PS\Import.Taxonomy.ps1" />
     <None Include="Resources\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{f35cf199-fddf-49ce-92e2-8683ed0b72cc}</SharePointProjectItemId>
@@ -172,7 +174,9 @@
     <Content Include="ReadMe.txt" />
     <Content Include="Resources\css\jQueryUI\jquery-ui.min.css" />
     <Content Include="Resources\css\jQueryUI\jquery-ui.theme.css" />
-    <Content Include="Resources\Elements.xml" />
+    <Content Include="Resources\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Resources\html\RoomLeaders.html" />
     <Content Include="Resources\image\jQueryUI\animated-overlay.gif" />
     <Content Include="Resources\image\jQueryUI\ui-bg_diagonals-thick_18_b81900_40x40.png" />

@@ -6,7 +6,7 @@ Add-Type -Path "Microsoft.SharePoint.Client.dll"
 Add-Type -Path "Microsoft.SharePoint.Client.Runtime.dll"
 Add-Type -Path "Microsoft.SharePoint.Client.Taxonomy.dll"
 
-$Url = $inputFile.SharePointSettings.SiteCollectionUrl;
+$Url = $inputFile.SharePointSettings.Url;
 $User = $inputFile.SharePointSettings.UserID;
 $Pwd = $inputFile.SharePointSettings.Password
 $SecurePwd = ConvertTo-SecureString $Pwd -AsPlainText -Force

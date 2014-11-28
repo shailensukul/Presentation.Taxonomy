@@ -1,10 +1,10 @@
 ﻿<SharePointSettings>
-  <Url>https://sharepointclouddesign.sharepoint.com</Url>
+  <Url>https://techedozdemo.sharepoint.com/sites/baseline</Url>
   <UserID>shailensukul@TechEdOzDemo.onmicrosoft.com</UserID>
-  <Password>f</Password>
+  <Password>p@ssw0rd</Password>
   <ContentTypeGroup>Sukul.Demo</ContentTypeGroup>
   <SiteColumnGroup>Sukul.Demo</SiteColumnGroup>
-  <TermStoreGroup>Sukul Terms</TermStoreGroup>
+  <TermStoreGroup>TechEdDemo</TermStoreGroup>
   <IsSiteSharePointOnline>true</IsSiteSharePointOnline>
-  <ScriptExportFolder>d:\temp</ScriptExportFolder>
+  <ScriptExportFolder>C:\Shailen\Code\SharePoint\Presentation.Taxonomy\Presentation.Taxonomy.Demo\PS</ScriptExportFolder>
 </SharePointSettings>
