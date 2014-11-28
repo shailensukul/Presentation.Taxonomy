@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Lists>
+	<List ID='da05bd47-4757-457d-8b67-764b946ee2b0' Title='Attendance' BaseTemplate='100' BaseType='GenericList' ContentTypesEnabled='True' Description='Group: Sukul.Demo' EnableAttachments='True' EnableVersioning='False>
+		<ContentTypeRefs>
+			<ContentTypeRef Id='0x01008955857FFAAD0A428C20698285E6FBDA009AF5A5DDD12DF14D808BA11BEB93D45E />
+			<ContentTypeRef Id='0x01200098B44B46000A584B9DBAB708738FFF5A />
+		</ContentTypeRefs>
+	</List>
+</Lists>
