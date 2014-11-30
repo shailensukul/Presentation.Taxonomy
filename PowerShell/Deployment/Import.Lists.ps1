@@ -1,63 +1,55 @@
-#Specify tenant admin and site URL
-$User = "admin@tenant.onmicrosoft.com"
-$SiteURL = https://tenant.sharepoint.com/sites/site
-$ListTitle = "List Title"
+# This script allows Lists belonging to a particular Group to be exported
+# Author: Shailen Sukul
+# http://shailensukul.com
+# INPUT FILE: Input.xml
 
-#Add references to SharePoint client assemblies and authenticate to Office 365 site - required for CSOM
-Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Client.dll"
-Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Client.Runtime.dll"
-$Password = Read-Host -Prompt "Please enter your password" -AsSecureString
-$Creds = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($User,$Password)
+$file = resolve-path("Exported.Lists.xml")
+[xml]$inputFile = Get-Content $file
+$file = resolve-path("Input.xml")
+[xml]$credFile = Get-Content $file
 
-#Bind to site collection
-$Context = New-Object Microsoft.SharePoint.Client.ClientContext($SiteURL)
-$Creds = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($User,$Password)
-$Context.Credentials = $Creds
+# 1) Source Site
+$sUrl = $credFile.SharePointSettings.Url;
+$sAdmin = $credFile.SharePointSettings.Credentials.UserID;
+$sPwd = $credFile.SharePointSettings.Credentials.Password
 
-#Retrieve lists
-$Lists = $Context.Web.Lists
-$Context.Load($Lists)
-$Context.ExecuteQuery()
+## Set locale here
+$lcid = "1033"
 
-#Create list with "custom" list template
-$ListInfo = New-Object Microsoft.SharePoint.Client.ListCreationInformation
-$ListInfo.Title = $ListTitle
-$ListInfo.TemplateType = "100"
-$List = $Context.Web.Lists.Add($ListInfo)
-$List.Description = $ListTitle
-$List.Update()
-$Context.ExecuteQuery()
+$sSecurePwd = ConvertTo-SecureString $sPwd -AsPlainText -Force
 
-#Retrieve site columns (fields)
-$SiteColumns = $Context.Web.AvailableFields
-$Context.Load($SiteColumns)
-$Context.ExecuteQuery()
+# these aren't required for the script to run, but help to develop
+Add-Type -Path "Microsoft.SharePoint.Client.dll"
+Add-Type -Path "Microsoft.SharePoint.Client.Runtime.dll"
+Add-Type -Path "Microsoft.SharePoint.Client.Taxonomy.dll"
 
-#Grab city and company fields
-$City = $SiteColumns = $Context.Web.AvailableFields | Where {$_.Title -eq "City"}
-$Company = $SiteColumns = $Context.Web.AvailableFields | Where {$_.Title -eq "Company"}
-$Context.Load($City)
-$Context.Load($Company)
-$Context.ExecuteQuery()
 
-#Add fields to the list
-$List.Fields.Add($City)
-$List.Fields.Add($Company)
-$List.Update()
-$Context.ExecuteQuery()
+#Add-Content $xmlFilePath "<?xml version=`"1.0`" encoding=`"utf-8`"?>"
+#Add-Content $xmlFilePath "`n<Fields>"
 
-#Add fields to the default view
-$DefaultView = $List.DefaultView
-$DefaultView.ViewFields.Add("City")
-$DefaultView.ViewFields.Add("Company")
-$DefaultView.Update()
-$Context.ExecuteQuery()
+# connect/authenticate to SharePoint Online and get ClientContext object.. 
+$Context = New-Object Microsoft.SharePoint.Client.ClientContext($sUrl)
+if ($credFile.SharePointSettings.IsSiteSharePointOnline -eq $true) {
+	$sCredentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($sAdmin, $sSecurePwd)
+} else {
+	$sCredentials = New-Object System.Net.NetworkCredential($sAdmin, $sSecurePwd)
+}
+$Context.Credentials = $sCredentials
 
-#Adds an item to the list
-$ListItemInfo = New-Object Microsoft.SharePoint.Client.ListItemCreationInformation
-$Item = $List.AddItem($ListItemInfo)
-$Item["Title"] = "New Item"
-$Item["Company"] = "Contoso"
-$Item["WorkCity"] = "London"
-$Item.Update()
-$Context.ExecuteQuery()
+
+$nodelist = $inputFile.SelectNodes("//Lists/List", $ns) # XPath is case sensitive
+foreach ($childNode in $nodelist) {	
+	Write-Host	$childNode.Title $childNode.ID
+	#Create list with "custom" list template
+	$ListInfo = New-Object Microsoft.SharePoint.Client.ListCreationInformation
+	$ListInfo.Title = $childNode.Title
+	$ListInfo.TemplateType = $childNode.BaseTemplate
+	$ListInfo.Url = $childNode.url
+	$List = $Context.Web.Lists.Add($ListInfo)
+	$List.Description = $childNode.Description
+	$List.Update()
+	$Context.ExecuteQuery()
+}
+$Context.Dispose()
+
+
