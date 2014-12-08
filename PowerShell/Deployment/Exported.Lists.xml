@@ -7,4 +7,46 @@
 			<ContentTypeRef Id='0x0120' Name='Folder' />
 		</ContentTypeRefs>
 	</List>
+<!--ContactUs-->
+	<List ID='ee3086ef-d299-4453-bf51-be82eb4a48a9' Url='Lists/ContactUs' Title='ContactUs' BaseTemplate='100' BaseType='GenericList' ContentTypesEnabled='False' Description='Group: Sukul.Demo' EnableAttachments='True' EnableVersioning='False' OnQuickLaunch='False'>
+		<ContentTypeRefs>
+			<ContentTypeRef Id='0x01' Name='Item' />
+			<ContentTypeRef Id='0x0120' Name='Folder' />
+		</ContentTypeRefs>
+	</List>
+<!--Guardians-->
+	<List ID='30daf2ba-6dfe-44a5-8b64-a3165ac30305' Url='Lists/Guardians' Title='Guardians' BaseTemplate='100' BaseType='GenericList' ContentTypesEnabled='True' Description='Group: Sukul.Demo' EnableAttachments='True' EnableVersioning='False' OnQuickLaunch='False'>
+		<ContentTypeRefs>
+			<ContentTypeRef Id='0x0100E24CA8452451C1448327FBDBF49A2A1C' Name='Guardian' />
+			<ContentTypeRef Id='0x0120' Name='Folder' />
+		</ContentTypeRefs>
+	</List>
+<!--Kids-->
+	<List ID='ec9f410b-24b9-4d5f-bb73-9c5a2181846b' Url='Lists/Kids' Title='Kids' BaseTemplate='100' BaseType='GenericList' ContentTypesEnabled='True' Description='Group: Sukul.Demo' EnableAttachments='True' EnableVersioning='False' OnQuickLaunch='False'>
+		<ContentTypeRefs>
+			<ContentTypeRef Id='0x010068602218A0E8D542B499AC331D8F9C7E' Name='Child' />
+			<ContentTypeRef Id='0x0120' Name='Folder' />
+		</ContentTypeRefs>
+	</List>
+<!--Potty-->
+	<List ID='6f29c019-2710-4e45-8a19-60a1d98e0ac6' Url='Lists/Potty' Title='Potty' BaseTemplate='100' BaseType='GenericList' ContentTypesEnabled='True' Description='Group: Sukul.Demo' EnableAttachments='True' EnableVersioning='False' OnQuickLaunch='False'>
+		<ContentTypeRefs>
+			<ContentTypeRef Id='0x0100390C8F4B6841B24D94E2B8A08E2D3C81' Name='Potty' />
+			<ContentTypeRef Id='0x0120' Name='Folder' />
+		</ContentTypeRefs>
+	</List>
+<!--Roster-->
+	<List ID='751347f8-8a33-4cac-8071-bf5cd156b395' Url='Lists/Roster' Title='Roster' BaseTemplate='100' BaseType='GenericList' ContentTypesEnabled='True' Description='Group: Sukul.Demo' EnableAttachments='True' EnableVersioning='False' OnQuickLaunch='False'>
+		<ContentTypeRefs>
+			<ContentTypeRef Id='0x01006551F70D7C0E3846A2CBD0B5A003181A' Name='Roster' />
+			<ContentTypeRef Id='0x0120' Name='Folder' />
+		</ContentTypeRefs>
+	</List>
+<!--Staff-->
+	<List ID='7479d0f8-6a0b-4d4d-a9c0-7e6e6356ebc9' Url='Lists/Staff' Title='Staff' BaseTemplate='100' BaseType='GenericList' ContentTypesEnabled='True' Description='Group: Sukul.Demo' EnableAttachments='True' EnableVersioning='False' OnQuickLaunch='False'>
+		<ContentTypeRefs>
+			<ContentTypeRef Id='0x0100F92B529AD18F4D498737307175B60E37' Name='Staff' />
+			<ContentTypeRef Id='0x0120' Name='Folder' />
+		</ContentTypeRefs>
+	</List>
 </Lists>
